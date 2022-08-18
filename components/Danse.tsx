@@ -20,8 +20,8 @@ export default function Danse({ image, nom, textes, danses }: DanseProps) {
       </TitleWrapper>
       <ContentWrapper>
         <TextContainer>
-          {textes.map((texte) => (
-            <p>{texte.paragraphe}</p>
+          {textes.map((texte, index) => (
+            <p key={index}>{texte.paragraphe}</p>
           ))}
         </TextContainer>
         <Image alt="marion" src={image.url} />
