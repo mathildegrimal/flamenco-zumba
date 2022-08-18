@@ -1,7 +1,7 @@
 import Layout from '../components/commons/Layout';
 import { GetStaticProps } from 'next';
 import ContactForm from '../components/Contact';
-import { loadContactData } from './lib/loadContactData';
+import { loadContactData } from '../lib/loadContactData';
 import { ContactProps } from '../types';
 
 const Contact = ({ menu, allPages, allContacts }: ContactProps) => {

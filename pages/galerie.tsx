@@ -8,7 +8,7 @@ import {
   GalleryImagesWrapper,
 } from '../styles/Gallery';
 import { GalerieProps, ImageType } from '../types';
-import { loadGalleryData } from './lib/loadGalleryData';
+import { loadGalleryData } from '../lib/loadGalleryData';
 
 const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
   const [selectedImage, setSelectedImage] = React.useState<ImageType>(

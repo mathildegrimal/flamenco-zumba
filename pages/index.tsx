@@ -2,7 +2,7 @@ import type { GetStaticProps } from 'next';
 
 import Layout from '../components/commons/Layout';
 import Accueil from '../components/Accueil';
-import { loadIndexData } from './lib/loadIndexData';
+import { loadIndexData } from '../lib/loadIndexData';
 import { HomeProps } from '../types';
 
 const Home = ({ menu, allPages, accueil }: HomeProps) => {

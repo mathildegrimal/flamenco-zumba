@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 
 import Layout from '../../components/commons/Layout';
 import Danse from '../../components/Danse';
-import { loadDansesData } from '../lib/loadDansesData';
+import { loadDansesData } from '../../lib/loadDansesData';
 import { DansesProps } from '../../types';
 
 const Name = ({ menu, allPages, allDanses }: DansesProps) => {

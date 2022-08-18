@@ -1,7 +1,7 @@
 import type { GetStaticProps } from 'next';
 import Layout from '../components/commons/Layout';
 import PlanningTable from '../components/PlanningTable';
-import { loadPlanningData } from './lib/loadPlanningData';
+import { loadPlanningData } from '../lib/loadPlanningData';
 import { PlanningProps } from '../types';
 
 const Planning = ({ allPlannings, allPages, menu }: PlanningProps) => {

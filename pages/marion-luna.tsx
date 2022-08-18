@@ -9,7 +9,7 @@ import {
   TitleWrapper,
 } from '../styles/Commons';
 import { MarionProps } from '../types';
-import { loadMarionData } from './lib/loadMarionData';
+import { loadMarionData } from '../lib/loadMarionData';
 
 const MarionLuna = ({ allPages, menu, allPresentations }: MarionProps) => {
   const menuImage = menu.marion;

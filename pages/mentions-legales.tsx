@@ -1,7 +1,7 @@
 import type { GetStaticProps } from 'next';
 
 import Layout from '../components/commons/Layout';
-import { loadIndexData } from './lib/loadIndexData';
+import { loadIndexData } from '../lib/loadIndexData';
 import { HomeProps, PageProps } from '../types';
 
 const MentionsLegales = ({ menu, allPages }: PageProps) => {
