@@ -74,7 +74,10 @@ export default function ContactForm({ telephone, email }: ContactType) {
         <p>
           <span>Marion Luna</span>
         </p>
-        <p>Association "Bougez Flamenco", Saint-Vincent-de-Barbeyrargues</p>
+        <p>
+          Association &quot; Bougez Flamenco &quot;,
+          Saint-Vincent-de-Barbeyrargues
+        </p>
         <p>
           <span>Téléphone : </span>
           {telephone}
