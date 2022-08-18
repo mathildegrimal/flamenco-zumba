@@ -1,6 +1,6 @@
-import { Container, Subtitle, Title, TitleWrapper } from '../styles/Commons';
+import { Container, Title, TitleWrapper } from '../styles/Commons';
 import FanIcon from './commons/FanIcon';
-import { InfosContainer } from '../styles/Contact';
+import { InfosContainer, InfosSubtitle } from '../styles/Contact';
 import { ContactType } from '../types';
 
 export default function ContactForm({ telephone, email }: ContactType) {
@@ -70,10 +70,18 @@ export default function ContactForm({ telephone, email }: ContactType) {
       {/*  </FormWrapper>*/}
       {/*// </FormContainer>*/}
       <InfosContainer>
-        <Subtitle>Mes coordonnées :</Subtitle>
-        <p>Marion Luna</p>
-        <p>Téléphone: {telephone}</p>
-        <p>Email: {email}</p>
+        <InfosSubtitle>Pour me contacter...</InfosSubtitle>
+        <p>
+          <span>Marion Luna</span>
+        </p>
+        <p>Association "Bougez Flamenco", Saint-Vincent-de-Barbeyrargues</p>
+        <p>
+          <span>Téléphone : </span>
+          {telephone}
+        </p>
+        <p>
+          <span>Email :</span> {email}
+        </p>
       </InfosContainer>
     </Container>
   );

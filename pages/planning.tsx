@@ -4,20 +4,20 @@ import PlanningTable from '../components/PlanningTable';
 import { loadPlanningData } from '../lib/loadPlanningData';
 import { PlanningProps } from '../types';
 
-const Planning = ({ allPlannings, allPages, menu }: PlanningProps) => {
+const Planning = ({ planning, allPages, menu }: PlanningProps) => {
   const image = menu.marion;
 
   return (
     <Layout image={image} pages={allPages}>
-      <PlanningTable planning={allPlannings} />
+      <PlanningTable planning={planning.planning} />
     </Layout>
   );
 };
 
 export const getStaticProps: GetStaticProps<PlanningProps> = async () => {
-  const { allPlannings, allPages, menu } = await loadPlanningData();
+  const { planning, allPages, menu } = await loadPlanningData();
   return {
-    props: { allPages, allPlannings, menu },
+    props: { allPages, planning, menu },
   };
 };
 

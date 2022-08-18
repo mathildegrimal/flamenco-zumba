@@ -7,11 +7,13 @@ export async function loadPlanningData() {
     query: gql`
       query {
         ${navbarQuery}
-        allPlannings(orderBy: heure_ASC) {
-          id
-          jour
-          heure
-          activite
+        planning {
+          planning {
+            alt
+            id
+            url
+            title
+          }
         }
       }
     `,

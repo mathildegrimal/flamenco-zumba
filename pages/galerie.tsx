@@ -9,6 +9,7 @@ import {
 } from '../styles/Gallery';
 import { GalerieProps, ImageType } from '../types';
 import { loadGalleryData } from '../lib/loadGalleryData';
+import SevillaneIcon from '../components/commons/SevillaneIcon';
 
 const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
   const [selectedImage, setSelectedImage] = React.useState<ImageType>(
@@ -25,6 +26,7 @@ const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
     <Layout image={image} pages={allPages}>
       <Container>
         <TitleWrapper>
+          <SevillaneIcon />
           <Title>Galerie</Title>
         </TitleWrapper>
 

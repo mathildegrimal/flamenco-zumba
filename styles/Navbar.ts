@@ -1,35 +1,39 @@
 import styled from 'styled-components';
 import { colors } from './constants';
 
-export const NavbarWrapper = styled.section`
+export const NavbarWrapper = styled.div`
   display: flex;
-  background: ${colors.rose};
-  height: 90vh;
+  background: red;
+  min-height: 100vh;
+  height: 100%;
   width: fit-content;
   justify-content: center;
   align-items: center;
   transition: all linear 0.5s;
 `;
 
-export const NavbarMain = styled.section`
+export const NavbarMain = styled.div`
   display: flex;
   z-index: 100;
+  min-height: 100vh;
+
   flex-direction: column;
   background: ${colors.rose};
-  height: 100%;
+
   width: 200px;
   justify-content: center;
   align-items: center;
   transition: all linear 0.5s;
 `;
 
-export const NavbarItemContainer = styled.section`
+export const NavbarItemContainer = styled.div`
   display: flex;
   position: absolute;
   z-index: 1;
   flex-direction: column;
   background: ${colors.rose};
-  height: 90vh;
+  height: 100%;
+  min-height: 100vh;
   width: 200px;
   justify-content: center;
   align-items: flex-start;

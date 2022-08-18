@@ -10,13 +10,6 @@ export type PageType = {
   titre: string;
 };
 
-export type PlanningType = {
-  id: string;
-  jour: string;
-  heure: string;
-  activite: string;
-};
-
 export interface ContactType {
   telephone: string;
   email: string;
@@ -107,9 +100,9 @@ export interface NavbarProps {
 }
 
 export interface PlanningProps extends PageProps {
-  allPlannings: Array<PlanningType>;
+  planning: PlanningTableProps;
 }
 
 export interface PlanningTableProps {
-  planning: Array<PlanningType>;
+  planning: ImageType;
 }

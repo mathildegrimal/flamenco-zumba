@@ -1,9 +1,9 @@
 import {
-  Container,
+  DansesNavbarContainer,
+  DansesNavbarWrapper,
   Icon,
   NavbarItem,
   NavbarItemContainer,
-  Wrapper,
 } from '../styles/DansesNavbar';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -19,8 +19,8 @@ export default function DansesNavbar({ danses }: DansesNavbarProps) {
   const router = useRouter();
   const { name } = router.query;
   return (
-    <Container>
-      <Wrapper>
+    <DansesNavbarContainer>
+      <DansesNavbarWrapper>
         <Icon onClick={handleOpen}>
           <svg
             width="25"
@@ -36,7 +36,7 @@ export default function DansesNavbar({ danses }: DansesNavbarProps) {
           </svg>
         </Icon>
         <Subtitle>Plus de danses</Subtitle>
-      </Wrapper>
+      </DansesNavbarWrapper>
       <NavbarItemContainer display={display ? 'flex' : 'none'}>
         {danses.map((danse) => (
           <NavbarItem
@@ -49,6 +49,6 @@ export default function DansesNavbar({ danses }: DansesNavbarProps) {
           </NavbarItem>
         ))}
       </NavbarItemContainer>
-    </Container>
+    </DansesNavbarContainer>
   );
 }

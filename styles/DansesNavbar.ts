@@ -5,12 +5,12 @@ export interface Props {
   display: string;
 }
 
-export const Container = styled.div`
+export const DansesNavbarContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin: 40px 80px 0 80px;
 `;
-export const Wrapper = styled.div`
+export const DansesNavbarWrapper = styled.div`
   display: flex;
   align-items: center;
   column-gap: 15px;

@@ -2,23 +2,30 @@ import styled from 'styled-components';
 import { borderRadius, colors } from './constants';
 
 export const Wrapper = styled.div`
-  height: 90vh;
-  flex: 1;
   display: flex;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   align-items: flex-start;
+`;
+
+export const Main = styled.main`
+  display: flex;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Container = styled.article`
   display: flex;
-  flex: 1;
-  height: 90vh;
+  min-width: 100%;
+  height: 100vh;
   flex-direction: column;
-  margin: 0 100px 0 100px;
+  overflow: scroll;
 `;
 
 export const TitleWrapper = styled.div`
   display: flex;
-  margin-top: 40px;
+  margin: 40px 80px 0 80px;
   align-items: center;
   column-gap: 30px;
 `;
@@ -33,7 +40,7 @@ export const Title = styled.h1`
 export const ContentWrapper = styled.div`
   display: flex;
   height: 100%;
-  margin-top: 40px;
+  margin: 40px 80px 0 80px;
   column-gap: 100px;
 `;
 
@@ -45,13 +52,14 @@ export const TextContainer = styled.div`
 
 export const Image = styled.img`
   width: 50%;
-  height: 500px;
+  height: auto;
+  max-height: 380px;
   object-fit: cover;
   object-position: 10% 50%;
   border-radius: ${borderRadius.image}px;
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled.h2`
   font-size: 1.6em;
   margin: 0;
   font-weight: bold;

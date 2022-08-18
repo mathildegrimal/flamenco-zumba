@@ -7,23 +7,21 @@ interface BackgroundImageProps {
 
 export const HeaderContainer = styled.div`
   display: flex;
-  height: 400px;
-  margin-top: 80px;
+  height: 350px;
   column-gap: 15px;
+  margin: 80px 80px 0 80px;
 `;
 
 export const RightHeaderImageContainer = styled.div`
   display: flex;
   height: 100%;
   width: 40%;
-  border-radius: ${borderRadius.image}px;
 `;
 
 export const RightHeaderImage = styled.img`
   object-fit: cover;
   width: 100%;
   object-position: 10% 50%;
-
   border-radius: ${borderRadius.image}px;
 `;
 
@@ -31,7 +29,6 @@ export const LeftHeaderImageContainer = styled.div`
   display: flex;
   height: 100%;
   width: 60%;
-  border-radius: ${borderRadius.image}px;
 `;
 export const LeftHeaderImage = styled.img`
   object-fit: cover;
@@ -52,11 +49,12 @@ export const Title = styled.h1`
   font-family: 'Petit Formal Script', cursive;
   font-size: 30px;
   color: ${colors.rose};
-  margin-top: 40px;
+  margin: 0;
 `;
 
 export const Text = styled.p`
   font-size: 18px;
   text-align: justify;
   line-height: 25px;
+  margin: 40px 80px 0 80px;
 `;

@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Navbar from './Navbar';
-import styles from '../../styles/Home.module.css';
 import { LayoutProps } from '../../types';
-import { Wrapper } from '../../styles/Commons';
+import { Main, Wrapper } from '../../styles/Commons';
 import Footer from './Footer';
 
 export default function Layout({ image, pages, children }: LayoutProps) {
@@ -29,7 +28,7 @@ export default function Layout({ image, pages, children }: LayoutProps) {
       </Head>
       <Wrapper>
         <Navbar image={image} pages={pages} />
-        <main className={styles.main}>{children}</main>
+        <Main>{children}</Main>
       </Wrapper>
       <Footer />
     </>

@@ -5,7 +5,8 @@ export const GalleryContainer = styled.article`
   display: flex;
   flex: 1;
   height: fit-content;
-  margin: 50px;
+  margin: 40px 80px 0 80px;
+  gap: 60px;
 `;
 
 export const GalleryImagesWrapper = styled.article`
@@ -13,21 +14,23 @@ export const GalleryImagesWrapper = styled.article`
   flex-wrap: wrap;
   gap: 10px;
   height: fit-content;
-  margin: 50px;
 `;
 
 export const GalleryImage = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   object-position: 10% 50%;
   border-radius: ${borderRadius.image}px;
   cursor: pointer;
+
   &.selected {
-    width: 400px;
-    height: 400px;
-    cursor: ;
+    width: 100%;
+    max-width: 565px;
+    height: 500px;
+    cursor: auto;
   }
+
   &.active {
     border: 5px solid ${colors.rose};
   }

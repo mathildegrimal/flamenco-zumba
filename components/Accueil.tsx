@@ -9,7 +9,7 @@ import {
   Text,
   Title,
 } from '../styles/Accueil';
-import { Button, Container } from '../styles/Commons';
+import { Button, Container, TitleWrapper } from '../styles/Commons';
 import { AccueilProps } from '../types';
 
 export default function Accueil({
@@ -33,19 +33,21 @@ export default function Accueil({
         </RightHeaderImageContainer>
       </HeaderContainer>
       <ContentContainer>
-        <Title>
-          {titleToDisplay.map((p, index) => {
-            if (p.marks?.includes('strong')) {
-              return (
-                <span key={index}>
-                  <strong>{p.value}</strong>
-                </span>
-              );
-            } else {
-              return <span key={index}>{p.value}</span>;
-            }
-          })}
-        </Title>
+        <TitleWrapper>
+          <Title>
+            {titleToDisplay.map((p, index) => {
+              if (p.marks?.includes('strong')) {
+                return (
+                  <span key={index}>
+                    <strong>{p.value}</strong>
+                  </span>
+                );
+              } else {
+                return <span key={index}>{p.value}</span>;
+              }
+            })}
+          </Title>
+        </TitleWrapper>
         <Text>{texte}</Text>
         <Button>
           <Link href="/planning">{boutonPlanning}</Link>
