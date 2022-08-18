@@ -1,21 +1,14 @@
 import type { GetStaticProps } from 'next';
 
 import Layout from '../components/commons/Layout';
-import Accueil from '../components/Accueil';
 import { loadIndexData } from './lib/loadIndexData';
-import { HomeProps } from '../types';
+import { HomeProps, PageProps } from '../types';
 
-const Home = ({ menu, allPages, accueil }: HomeProps) => {
+const MentionsLegales = ({ menu, allPages }: PageProps) => {
   const image = menu.marion;
-  const { header, titre, texte, boutonPlanning } = accueil;
   return (
     <Layout image={image} pages={allPages}>
-      <Accueil
-        header={header}
-        titre={titre}
-        texte={texte}
-        boutonPlanning={boutonPlanning}
-      />
+      <p>mentions</p>
     </Layout>
   );
 };
@@ -27,4 +20,4 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   };
 };
 
-export default Home;
+export default MentionsLegales;
