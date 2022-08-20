@@ -1,3 +1,5 @@
+import React from 'react';
+
 export type ImageType = {
   id: string;
   alt: string;
@@ -46,10 +48,14 @@ export interface PageProps {
 }
 
 export interface MarionProps extends PageProps {
-  allPresentations: {
+  presentation: {
+    id: string;
     image: ImageType;
-    texte: string;
-  }[];
+    paragraphes: {
+      paragraphe: string;
+      id: string;
+    }[];
+  };
 }
 
 export interface HomeProps extends PageProps {
@@ -97,6 +103,8 @@ export interface LayoutProps {
 export interface NavbarProps {
   image: ImageType;
   pages: Array<PageType>;
+  handleOpen: React.MouseEventHandler<HTMLDivElement>;
+  open: boolean;
 }
 
 export interface PlanningProps extends PageProps {

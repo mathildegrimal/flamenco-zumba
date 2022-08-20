@@ -6,29 +6,23 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 100vw;
+  width: 100%;
 
   @media screen and (${device.s}) {
     flex-direction: row;
     min-height: 100vh;
     height: 100%;
-    width: 100%;
     align-items: flex-start;
   }
 
   @media screen and (${device.m}) {
-    display: flex;
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    align-items: flex-start;
   }
 `;
 
 export const Main = styled.main`
   display: flex;
   flex-direction: column;
-
+  width: 100%;
   @media screen and (${device.s}) {
   }
   @media screen and (${device.m}) {
@@ -38,8 +32,9 @@ export const Main = styled.main`
 export const Container = styled.article`
   display: flex;
   flex-direction: column;
+  justify-content: start;
   min-height: 100vh;
-
+  width: 100%;
   @media screen and (${device.s}) {
     overflow: scroll;
     height: 100vh;
@@ -59,13 +54,15 @@ export const TitleWrapper = styled.div`
   }
 
   @media screen and (${device.s}) {
+    margin: 40px 40px 0 40px;
+  }
+
+  @media screen and (${device.m}) {
     text-align: left;
     margin: 40px 80px 0 80px;
     > svg {
       display: flex;
     }
-  }
-  @media screen and (${device.m}) {
   }
 `;
 
@@ -76,9 +73,10 @@ export const Title = styled.h1`
   font-size: 3em;
 
   @media screen and (${device.s}) {
-    font-size: 5em;
+    font-size: 4em;
   }
   @media screen and (${device.m}) {
+    font-size: 5em;
   }
 `;
 
@@ -86,18 +84,20 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-flow: column-reverse;
+  align-items: center;
   height: 100%;
   margin: 30px 20px 20px 20px;
   row-gap: 20px;
   @media screen and (${device.s}) {
-    flex-direction: row;
-    column-gap: 100px;
-
-    margin: 40px 80px 0 80px;
-    flex-flow: row-reverse;
+    margin: 40px 40px 40px 40px;
+    justify-content: start;
   }
 
   @media screen and (${device.m}) {
+    flex-direction: row;
+    column-gap: 100px;
+    margin: 40px 80px 0 80px;
+    flex-flow: row-reverse;
   }
 `;
 
@@ -106,25 +106,27 @@ export const TextContainer = styled.div`
   text-align: justify;
 
   @media screen and (${device.s}) {
-    width: 50%;
   }
 
   @media screen and (${device.m}) {
+    width: 50%;
   }
 `;
 
 export const Image = styled.img`
-  height: auto;
+  width: 100%;
   max-height: 380px;
+  margin: 0 20px;
   object-fit: cover;
   object-position: 0 10%;
   border-radius: ${borderRadius.image}px;
-
   @media screen and (${device.s}) {
-    width: 50%;
+    object-position: 0 50%;
   }
 
   @media screen and (${device.m}) {
+    max-height: 380px;
+    width: 50%;
   }
 `;
 

@@ -12,16 +12,17 @@ import { Subtitle } from '../styles/Commons';
 import { DansesNavbarProps } from '../types';
 
 export default function DansesNavbar({ danses }: DansesNavbarProps) {
+  const router = useRouter();
   const [display, setDisplay] = React.useState<boolean>(false);
+
   const handleOpen = () => {
     setDisplay(!display);
   };
-  const router = useRouter();
   const { name } = router.query;
   return (
     <DansesNavbarContainer>
       <DansesNavbarWrapper>
-        <Icon onClick={handleOpen}>
+        <Icon onClick={handleOpen} className={display ? 'open' : ''}>
           <svg
             width="25"
             height="25"

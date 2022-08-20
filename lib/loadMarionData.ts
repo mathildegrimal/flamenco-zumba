@@ -7,13 +7,18 @@ export async function loadMarionData() {
     query: gql`
       query {
         ${navbarQuery}
-         allPresentations {
+         presentation {
+          id
           image {
-            id
-            url
             alt
+            id
+            title
+            url
           }
-          texte
+          paragraphes {
+            paragraphe
+            id
+          }
         }
       }
     `,

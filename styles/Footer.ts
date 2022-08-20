@@ -15,6 +15,7 @@ export const FooterContainer = styled.footer`
   @media screen and (${device.s}) {
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 100px;
   }
   @media screen and (${device.m}) {
   }
@@ -27,6 +28,7 @@ export const FooterWrapper = styled.div`
 
   @media screen and (${device.s}) {
     flex-direction: row;
+    column-gap: 50px;
   }
   @media screen and (${device.m}) {
   }

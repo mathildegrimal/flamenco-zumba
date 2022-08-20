@@ -11,9 +11,10 @@ export const DansesNavbarContainer = styled.div`
   flex-direction: column;
   margin: 30px 20px 0 20px;
   @media screen and (${device.s}) {
-    margin: 40px 80px 0 80px;
+    margin: 40px 40px 0 40px;
   }
   @media screen and (${device.m}) {
+    margin: 40px 80px 0 80px;
   }
 `;
 export const DansesNavbarWrapper = styled.div`
@@ -32,12 +33,12 @@ export const NavbarItemContainer = styled.nav`
   flex-direction: column;
 
   @media screen and (${device.s}) {
+  }
+  @media screen and (${device.m}) {
     margin-top: 15px;
     flex-direction: row;
     width: 100%;
     column-gap: 20px;
-  }
-  @media screen and (${device.m}) {
   }
 `;
 
@@ -64,4 +65,11 @@ export const NavbarItem = styled.p`
 
 export const Icon = styled.div`
   cursor: pointer;
+  transition: all ease-in 0.5s;
+
+  &.open {
+    transform: rotate(45deg);
+
+  }
+}
 `;

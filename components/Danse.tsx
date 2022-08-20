@@ -9,6 +9,7 @@ import {
 import FanIcon from './commons/FanIcon';
 import DansesNavbar from './DansesNavbar';
 import { DanseProps } from '../types';
+import React from 'react';
 
 export default function Danse({ image, nom, textes, danses }: DanseProps) {
   return (

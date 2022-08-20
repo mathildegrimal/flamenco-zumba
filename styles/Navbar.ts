@@ -8,7 +8,6 @@ export const NavbarWrapper = styled.div`
   width: 100%;
 
   @media screen and (${device.s}) {
-    min-height: 100vh;
     height: 100%;
     width: fit-content;
     justify-content: center;
@@ -23,14 +22,16 @@ export const NavbarMain = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
-  background: ${colors.rose};
   align-items: center;
   justify-content: flex-end;
   padding: 0 20px;
+
+  background: ${colors.rose};
+
   transition: all linear 0.5s;
   z-index: 100;
   @media screen and (${device.s}) {
-    min-height: 100vh;
+    height: 100vh;
     flex-direction: column;
     width: 200px;
     justify-content: center;
@@ -57,16 +58,12 @@ export const NavbarItemContainer = styled.div`
   }
 
   @media screen and (${device.s}) {
-    display: flex;
-    position: absolute;
     flex-direction: column;
-    background: ${colors.rose};
     height: 100%;
     min-height: 100vh;
     width: 200px;
     justify-content: center;
     align-items: flex-start;
-    transition: all linear 0.5s;
     transform: translateY(0);
 
     &.open {
@@ -97,7 +94,8 @@ export const NavbarItemText = styled.a`
   color: white;
   cursor: pointer;
   margin: 10px 0;
-  transition: all linear 0.5s;
+  transition: all linear 0.2s;
+  font-size: 20px;
 
   &:hover {
     font-style: italic;
@@ -107,19 +105,12 @@ export const NavbarItemText = styled.a`
   &.active {
     font-style: italic;
     font-weight: bold;
-    font-size: 18px;
   }
-`;
 
-export const MenuButton = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  @media screen and (${device.s}) {
+  }
+  @media screen and (${device.m}) {
+  }
 `;
 
 export const NavbarText = styled.p`
@@ -134,7 +125,11 @@ export const NavbarText = styled.p`
 `;
 export const NavbarIcon = styled.div`
   width: auto;
-  margin-right: 30px;
+  cursor: pointer;
+
+  &.close-icon {
+    margin-right: 10px;
+  }
 
   &.menu-close {
     display: none;
@@ -145,8 +140,10 @@ export const NavbarIcon = styled.div`
   }
 
   @media screen and (${device.s}) {
-    margin-top: 10px;
     margin-right: 0;
+    &.close-icon {
+      margin-right: 0;
+    }
   }
   @media screen and (${device.m}) {
   }

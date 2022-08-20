@@ -11,10 +11,10 @@ import {
 import { MarionProps } from '../types';
 import { loadMarionData } from '../lib/loadMarionData';
 
-const MarionLuna = ({ allPages, menu, allPresentations }: MarionProps) => {
+const MarionLuna = ({ allPages, menu, presentation }: MarionProps) => {
   const menuImage = menu.marion;
 
-  const { image, texte } = allPresentations[0];
+  const { image, paragraphes } = presentation;
   return (
     <Layout image={menuImage} pages={allPages}>
       <Container>
@@ -22,7 +22,11 @@ const MarionLuna = ({ allPages, menu, allPresentations }: MarionProps) => {
           <Title>Marion Luna</Title>
         </TitleWrapper>
         <ContentWrapper>
-          <TextContainer>{texte}</TextContainer>{' '}
+          <TextContainer>
+            {paragraphes.map((p, index) => (
+              <p key={index}>{p.paragraphe}</p>
+            ))}
+          </TextContainer>
           <Image alt="marion" src={image.url} />
         </ContentWrapper>
       </Container>
@@ -31,9 +35,9 @@ const MarionLuna = ({ allPages, menu, allPresentations }: MarionProps) => {
 };
 
 export const getStaticProps: GetStaticProps<MarionProps> = async () => {
-  const { allPages, menu, allPresentations } = await loadMarionData();
+  const { allPages, menu, presentation } = await loadMarionData();
   return {
-    props: { allPages, menu, allPresentations },
+    props: { allPages, menu, presentation },
   };
 };
 
