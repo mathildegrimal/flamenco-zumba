@@ -1,18 +1,48 @@
 import styled from 'styled-components';
 import { borderRadius, colors } from './constants';
+import { device } from './breakpoints';
 
 export const Wrapper = styled.div`
   display: flex;
+  flex: 1;
+  flex-direction: column;
   min-height: 100vh;
   height: 100%;
-  width: 100%;
-  align-items: flex-start;
+  width: 100vw;
+
+  @media screen and (${device.s}) {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  @media screen and (${device.m}) {
+    display: flex;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+  }
 `;
 
 export const Main = styled.main`
   display: flex;
-  width: 100%;
-  height: 100%;
+  flex-direction: column;
+
+  width: 100vw;
+  @media screen and (${device.s}) {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (${device.m}) {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const Container = styled.article`
