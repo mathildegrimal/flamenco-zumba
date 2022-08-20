@@ -1,49 +1,32 @@
 import styled from 'styled-components';
+import { device } from './breakpoints';
 
 export const PlanningImage = styled.img`
   height: 800px;
-  object-fit: contain;
+  margin: 0 20px;
   width: auto;
+  object-fit: contain;
+
+  @media screen and (${device.s}) {
+    margin: 0;
+  }
+  @media screen and (${device.m}) {
+  }
 `;
 
 export const DownloadPlanningContainer = styled.div`
   display: flex;
   align-items: center;
-  margin: 40px 80px 0 80px;
+  margin: 30px 20px 0 20px;
   gap: 10px;
 
   > a {
     font-weight: bold;
   }
-`;
 
-//
-// export const TableContainer = styled.section`
-//   display: flex;
-//   width: 100%;
-//   margin-top: 50px;
-// `;
-// export const Table = styled.table`
-//   width: fit-content;
-//   border-collapse: collapse;
-// `;
-//
-// export const TableHeadCell = styled.th`
-//   color: white;
-//   background: ${colors.rose};
-//   width: fit-content;
-//   padding: 15px;
-//
-//   &:first-child {
-//     border-radius: 10px 0 0 0;
-//   }
-//
-//   &:last-child {
-//     border-radius: 0 10px 0 0;
-//   }
-// `;
-//
-// export const TableCell = styled.td`
-//   padding: 15px;
-//   border: 1px solid lightgrey;
-// `;
+  @media screen and (${device.s}) {
+    margin: 40px 80px 0 80px;
+  }
+  @media screen and (${device.m}) {
+  }
+`;

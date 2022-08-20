@@ -4,14 +4,11 @@ import { device } from './breakpoints';
 
 export const Wrapper = styled.div`
   display: flex;
-  flex: 1;
   flex-direction: column;
-  min-height: 100vh;
   height: 100%;
-  width: 100vw;
+  max-width: 100vw;
 
   @media screen and (${device.s}) {
-    display: flex;
     flex-direction: row;
     min-height: 100vh;
     height: 100%;
@@ -32,61 +29,103 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
 
-  width: 100vw;
   @media screen and (${device.s}) {
-    display: flex;
-    width: 100%;
-    height: 100%;
   }
   @media screen and (${device.m}) {
-    display: flex;
-    width: 100%;
-    height: 100%;
   }
 `;
 
 export const Container = styled.article`
   display: flex;
-  min-width: 100%;
-  height: 100vh;
   flex-direction: column;
-  overflow: scroll;
+  min-height: 100vh;
+
+  @media screen and (${device.s}) {
+    overflow: scroll;
+    height: 100vh;
+  }
+  @media screen and (${device.m}) {
+  }
 `;
 
 export const TitleWrapper = styled.div`
   display: flex;
-  margin: 40px 80px 0 80px;
+  margin: 30px 20px 0 20px;
   align-items: center;
-  column-gap: 30px;
+  text-align: center;
+
+  > svg {
+    display: none;
+  }
+
+  @media screen and (${device.s}) {
+    text-align: left;
+    margin: 40px 80px 0 80px;
+    > svg {
+      display: flex;
+    }
+  }
+  @media screen and (${device.m}) {
+  }
 `;
 
 export const Title = styled.h1`
   margin: 0;
-  font-size: 5em;
   font-family: 'Petit Formal Script', cursive;
   color: ${colors.rose};
+  font-size: 3em;
+
+  @media screen and (${device.s}) {
+    font-size: 5em;
+  }
+  @media screen and (${device.m}) {
+  }
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
   height: 100%;
-  margin: 40px 80px 0 80px;
-  column-gap: 100px;
+  margin: 30px 20px 20px 20px;
+  row-gap: 20px;
+  @media screen and (${device.s}) {
+    flex-direction: row;
+    column-gap: 100px;
+
+    margin: 40px 80px 0 80px;
+    flex-flow: row-reverse;
+  }
+
+  @media screen and (${device.m}) {
+  }
 `;
 
 export const TextContainer = styled.div`
-  width: 50%;
   font-size: 1em;
   text-align: justify;
+
+  @media screen and (${device.s}) {
+    width: 50%;
+  }
+
+  @media screen and (${device.m}) {
+  }
 `;
 
 export const Image = styled.img`
-  width: 50%;
   height: auto;
   max-height: 380px;
   object-fit: cover;
-  object-position: 10% 50%;
+  object-position: 0 10%;
   border-radius: ${borderRadius.image}px;
+
+  @media screen and (${device.s}) {
+    width: 50%;
+  }
+
+  @media screen and (${device.m}) {
+  }
 `;
 
 export const Subtitle = styled.h2`

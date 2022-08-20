@@ -4,7 +4,7 @@ import { device } from './breakpoints';
 
 export const NavbarWrapper = styled.div`
   display: flex;
-  height: 120px;
+  height: 80px;
   width: 100%;
 
   @media screen and (${device.s}) {
@@ -13,21 +13,15 @@ export const NavbarWrapper = styled.div`
     width: fit-content;
     justify-content: center;
     align-items: center;
-    transition: all linear 0.5s;
   }
+
   @media screen and (${device.m}) {
-    min-height: 100vh;
-    height: 100%;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
-    transition: all linear 0.5s;
   }
 `;
 
 export const NavbarMain = styled.div`
   display: flex;
-  height: 120px;
+  height: 100%;
   width: 100%;
   background: ${colors.rose};
   align-items: center;
@@ -36,18 +30,12 @@ export const NavbarMain = styled.div`
   transition: all linear 0.5s;
   z-index: 100;
   @media screen and (${device.s}) {
-    z-index: 100;
     min-height: 100vh;
     flex-direction: column;
     width: 200px;
     justify-content: center;
   }
   @media screen and (${device.m}) {
-    z-index: 100;
-    min-height: 100vh;
-    flex-direction: column;
-    width: 200px;
-    justify-content: center;
   }
 `;
 
@@ -62,15 +50,15 @@ export const NavbarItemContainer = styled.div`
   align-items: center;
   transition: all linear 0.5s;
   transform: translateY(-100%);
+  padding: 20px 0;
 
   &.open {
-    transform: translateY(calc(100% - 150px));
+    transform: translateY(70px);
   }
 
   @media screen and (${device.s}) {
     display: flex;
     position: absolute;
-
     flex-direction: column;
     background: ${colors.rose};
     height: 100%;
@@ -86,26 +74,12 @@ export const NavbarItemContainer = styled.div`
     }
   }
   @media screen and (${device.m}) {
-    display: flex;
-    position: absolute;
-
-    flex-direction: column;
-    background: ${colors.rose};
-    height: 100%;
-    min-height: 100vh;
-    width: 200px;
-    justify-content: center;
-    align-items: flex-start;
-    transition: all linear 0.5s;
-
-    &.open {
-      transform: translateX(100%);
-    }
   }
 `;
 
 export const NavbarImage = styled.img`
   display: none;
+
   @media screen and (${device.s}) {
     display: flex;
     border-radius: 50%;
@@ -116,13 +90,6 @@ export const NavbarImage = styled.img`
     cursor: pointer;
   }
   @media screen and (${device.m}) {
-    display: flex;
-    border-radius: 50%;
-    height: 140px;
-    width: 140px;
-    object-fit: cover;
-    object-position: 0 0;
-    cursor: pointer;
   }
 `;
 
@@ -163,7 +130,6 @@ export const NavbarText = styled.p`
     display: flex;
   }
   @media screen and (${device.m}) {
-    display: flex;
   }
 `;
 export const NavbarIcon = styled.div`
@@ -180,9 +146,8 @@ export const NavbarIcon = styled.div`
 
   @media screen and (${device.s}) {
     margin-top: 10px;
-    margin-right: 0px;
+    margin-right: 0;
   }
   @media screen and (${device.m}) {
-    margin-top: 10px;
   }
 `;

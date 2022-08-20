@@ -22,8 +22,8 @@ const MarionLuna = ({ allPages, menu, allPresentations }: MarionProps) => {
           <Title>Marion Luna</Title>
         </TitleWrapper>
         <ContentWrapper>
+          <TextContainer>{texte}</TextContainer>{' '}
           <Image alt="marion" src={image.url} />
-          <TextContainer>{texte}</TextContainer>
         </ContentWrapper>
       </Container>
     </Layout>

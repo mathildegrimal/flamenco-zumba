@@ -8,18 +8,15 @@ export const HeaderContainer = styled.div`
   align-items: center;
   height: 375px;
   margin: 20px 20px 0 20px;
-
+  gap: 15px;
   @media screen and (${device.s}) {
     flex-direction: row;
-
     height: 350px;
     column-gap: 15px;
     margin: 80px 80px 0 80px;
   }
+
   @media screen and (${device.m}) {
-    height: 350px;
-    column-gap: 15px;
-    margin: 80px 80px 0 80px;
   }
 `;
 
@@ -34,9 +31,6 @@ export const RightHeaderImageContainer = styled.div`
     width: 40%;
   }
   @media screen and (${device.m}) {
-    display: flex;
-    height: 100%;
-    width: 40%;
   }
 `;
 
@@ -58,9 +52,6 @@ export const LeftHeaderImageContainer = styled.div`
     width: 60%;
   }
   @media screen and (${device.m}) {
-    display: flex;
-    height: 100%;
-    width: 60%;
   }
 `;
 export const LeftHeaderImage = styled.img`
@@ -76,18 +67,39 @@ export const ContentContainer = styled.article`
   align-items: center;
   width: 100%;
   height: 100%;
+  margin-bottom: 30px;
+
+  @media screen and (${device.s}) {
+    maring: 0;
+  }
+
+  @media screen and (${device.m}) {
+  }
 `;
 
 export const Title = styled.h1`
   font-family: 'Petit Formal Script', cursive;
-  font-size: 30px;
   color: ${colors.rose};
   margin: 0;
+  font-size: 25px;
+
+  @media screen and (${device.s}) {
+    font-size: 30px;
+  }
+
+  @media screen and (${device.m}) {
+  }
 `;
 
 export const Text = styled.p`
   font-size: 18px;
   text-align: justify;
   line-height: 25px;
-  margin: 40px 80px 0 80px;
+  margin: 20px 20px 0 20px;
+
+  @media screen and (${device.s}) {
+    margin: 40px 80px 0 80px;
+  }
+  @media screen and (${device.m}) {
+  }
 `;
