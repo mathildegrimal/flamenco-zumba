@@ -5,6 +5,8 @@ import { Container, Title, TitleWrapper } from '../styles/Commons';
 import {
   GalleryContainer,
   GalleryImage,
+  GalleryImageSelected,
+  GalleryImageSelectedContainer,
   GalleryImagesWrapper,
 } from '../styles/Gallery';
 import { GalerieProps, ImageType } from '../types';
@@ -31,11 +33,12 @@ const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
         </TitleWrapper>
 
         <GalleryContainer>
-          <GalleryImage
-            className="selected"
-            src={selectedImage.url}
-            alt={selectedImage.alt}
-          />
+          <GalleryImageSelectedContainer>
+            <GalleryImageSelected
+              src={selectedImage.url}
+              alt={selectedImage.alt}
+            />
+          </GalleryImageSelectedContainer>
           <GalleryImagesWrapper>
             {images.map((image) => (
               <GalleryImage

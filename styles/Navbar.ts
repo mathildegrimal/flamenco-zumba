@@ -6,9 +6,14 @@ export const NavbarWrapper = styled.div`
   display: flex;
   height: 80px;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  opacity: 0.95;
 
   @media screen and (${device.s}) {
     height: 100%;
+    position: relative;
     width: fit-content;
     justify-content: center;
     align-items: center;
@@ -23,15 +28,14 @@ export const NavbarMain = styled.div`
   height: 100%;
   width: 100%;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 0 20px;
-
   background: ${colors.rose};
-
   transition: all linear 0.5s;
   z-index: 100;
   @media screen and (${device.s}) {
     height: 100vh;
+    padding: 0;
     flex-direction: column;
     width: 200px;
     justify-content: center;
@@ -75,16 +79,19 @@ export const NavbarItemContainer = styled.div`
 `;
 
 export const NavbarImage = styled.img`
-  display: none;
+  display: flex;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  object-position: 0 0;
+  cursor: pointer;
+  margin-left: 10px;
 
   @media screen and (${device.s}) {
-    display: flex;
-    border-radius: 50%;
     height: 140px;
     width: 140px;
-    object-fit: cover;
-    object-position: 0 0;
-    cursor: pointer;
+    margin: 0;
   }
   @media screen and (${device.m}) {
   }
@@ -126,6 +133,10 @@ export const NavbarText = styled.p`
 export const NavbarIcon = styled.div`
   width: auto;
   cursor: pointer;
+
+  > svg {
+    height: 50px;
+  }
 
   &.close-icon {
     margin-right: 10px;

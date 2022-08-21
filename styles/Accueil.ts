@@ -13,10 +13,11 @@ export const HeaderContainer = styled.div`
     flex-direction: row;
     height: 350px;
     column-gap: 15px;
-    margin: 80px 80px 0 80px;
+    margin: 40px 40px 0 40px;
   }
 
   @media screen and (${device.m}) {
+    margin: 80px 80px 0 80px;
   }
 `;
 
@@ -66,11 +67,11 @@ export const ContentContainer = styled.article`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   margin-bottom: 30px;
 
   @media screen and (${device.s}) {
-    maring: 0;
+    margin: 0;
   }
 
   @media screen and (${device.m}) {
@@ -98,8 +99,10 @@ export const Text = styled.p`
   margin: 20px 20px 0 20px;
 
   @media screen and (${device.s}) {
-    margin: 40px 80px 0 80px;
+    margin: 40px 40px 0 40px;
   }
+
   @media screen and (${device.m}) {
+    margin: 40px 80px 0 80px;
   }
 `;

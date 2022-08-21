@@ -133,7 +133,9 @@ export default function Navbar({
             return (
               <Link key={page.id} href={`${page.slug}/flamenco`}>
                 <NavbarItemText
-                  className={router.pathname === page.slug ? 'active' : ''}
+                  className={
+                    router.pathname.includes(page.slug) ? 'active' : ''
+                  }
                 >
                   {page.titre}
                 </NavbarItemText>

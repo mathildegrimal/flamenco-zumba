@@ -30,16 +30,17 @@ export const Main = styled.main`
 `;
 
 export const Container = styled.article`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: start;
   min-height: 100vh;
   width: 100%;
   @media screen and (${device.s}) {
-    overflow: scroll;
-    height: 100vh;
   }
   @media screen and (${device.m}) {
+    overflow: scroll;
+    height: 100vh;
   }
 `;
 

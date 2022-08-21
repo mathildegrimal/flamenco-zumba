@@ -18,17 +18,21 @@ export const DownloadPlanningContainer = styled.div`
     margin: 40px 80px 0 80px;
   }
 `;
-
-export const PlanningImage = styled.img`
+export const PlanningImageContainer = styled.div`
   display: flex;
-  height: 800px;
   margin: 20px 0;
-  width: auto;
+  justify-content: center;
+`;
+export const PlanningImage = styled.img`
+  width: 80%;
+  height: auto;
   object-fit: contain;
 
   @media screen and (${device.s}) {
+    width: 70%;
   }
 
   @media screen and (${device.m}) {
+    width: 60%;
   }
 `;

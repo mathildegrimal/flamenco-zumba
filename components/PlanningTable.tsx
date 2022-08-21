@@ -1,7 +1,11 @@
 import { Container, Title, TitleWrapper } from '../styles/Commons';
 import FanIcon from './commons/FanIcon';
 import { PlanningTableProps } from '../types';
-import { DownloadPlanningContainer, PlanningImage } from '../styles/Planning';
+import {
+  DownloadPlanningContainer,
+  PlanningImage,
+  PlanningImageContainer,
+} from '../styles/Planning';
 import Link from 'next/link';
 
 export default function PlanningTable({ planning }: PlanningTableProps) {
@@ -31,7 +35,9 @@ export default function PlanningTable({ planning }: PlanningTableProps) {
           Télécharger le planning
         </Link>
       </DownloadPlanningContainer>
-      <PlanningImage src={planning.url} alt={planning.alt} />
+      <PlanningImageContainer>
+        <PlanningImage src={planning.url} alt={planning.alt} />
+      </PlanningImageContainer>
     </Container>
   );
 }
