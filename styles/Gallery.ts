@@ -39,7 +39,7 @@ export const GalleryImageSelected = styled.img`
   height: 100%;
   cursor: auto;
   object-fit: cover;
-  object-position: 10% 50%;
+  object-position: 0 0;
   border-radius: ${borderRadius.image}px;
 
   @media screen and (${device.s}) {

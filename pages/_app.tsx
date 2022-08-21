@@ -15,6 +15,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="viewport"
           content="width=device-width, initial-scale=1.0, height=device-height,"
         />
+        <meta
+          name="google-site-verification"
+          content="PSOR-BRIzIfnXmQ6eB9npKJ-eeX3zsObjRQ3NGoMB1w"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
