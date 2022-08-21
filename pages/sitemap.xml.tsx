@@ -9,13 +9,13 @@ const Sitemap = () => {
 
 export const getServerSideProps = async ({ res }: any) => {
   const BASE_URL = 'www.flamenco-zumba.com';
-  const pagesDir = 'pages/**/*.tsx';
+  const pagesDir = 'pages/*.tsx';
   let pagesPaths: Array<string> = glob.sync(pagesDir);
   pagesPaths = pagesPaths
-    .filter((path: any) => !path.includes('['))
     .filter((path: any) => !path.includes('/_'))
     .filter((path: any) => !path.includes('404'))
     .map((staticPagePath) => {
+      console.log(staticPagePath.split('pages/')[1]);
       if (staticPagePath.split('.tsx')[0].includes('index')) {
         return `${BASE_URL}`;
       }
