@@ -10,8 +10,6 @@ export const Wrapper = styled.div`
 
   @media screen and (${device.s}) {
     flex-direction: row;
-    min-height: 100vh;
-    height: 100%;
     align-items: flex-start;
   }
 
@@ -34,13 +32,12 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
+  overflow: scroll;
   @media screen and (${device.s}) {
   }
   @media screen and (${device.m}) {
-    overflow: scroll;
-    height: 100vh;
   }
 `;
 

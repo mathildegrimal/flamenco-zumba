@@ -25,7 +25,6 @@ export const NavbarWrapper = styled.div`
 
 export const NavbarMain = styled.div`
   display: flex;
-  height: 100%;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -33,6 +32,7 @@ export const NavbarMain = styled.div`
   background: ${colors.rose};
   transition: all linear 0.5s;
   z-index: 100;
+
   @media screen and (${device.s}) {
     height: 100vh;
     padding: 0;
@@ -63,8 +63,7 @@ export const NavbarItemContainer = styled.div`
 
   @media screen and (${device.s}) {
     flex-direction: column;
-    height: 100%;
-    min-height: 100vh;
+    height: 100vh;
     width: 200px;
     justify-content: center;
     align-items: flex-start;
