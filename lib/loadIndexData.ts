@@ -7,20 +7,21 @@ export async function loadIndexData() {
     query: gql`
       query {
         ${navbarQuery}
-        accueil {
-          boutonPlanning
-          id
-          texte
-          header {
-            url
-            title
-            id
-            alt
+          accueil {
+            texte {
+              value
+            }
+            titre {
+              value
+            }
+            boutonPlanning
+            header {
+              alt
+              id
+              title
+              url
+            }
           }
-          titre {
-            value
-          }
-        }
       }
     `,
   });

@@ -17,7 +17,7 @@ export interface ContactType {
   email: string;
 }
 
-export type TitleType = {
+export type RichTextType = {
   value: {
     document: {
       children: {
@@ -34,6 +34,7 @@ export type TitleType = {
 
 export interface DanseType {
   id: string;
+  subtitle: string;
   image: ImageType;
   nom: string;
   textes: { paragraphe: string }[];
@@ -64,8 +65,8 @@ export interface HomeProps extends PageProps {
 
 export interface AccueilProps {
   header: Array<ImageType>;
-  titre: TitleType;
-  texte: string;
+  titre: RichTextType;
+  texte: RichTextType;
   boutonPlanning: string;
 }
 
@@ -88,6 +89,7 @@ export interface DanseProps {
   nom: string;
   textes: { paragraphe: string }[];
   danses: Array<DanseType>;
+  subtitle: string;
 }
 
 export interface DansesNavbarProps {

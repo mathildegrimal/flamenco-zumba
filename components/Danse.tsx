@@ -2,6 +2,7 @@ import {
   Container,
   ContentWrapper,
   Image,
+  ImageContainer,
   TextContainer,
   Title,
   TitleWrapper,
@@ -11,7 +12,13 @@ import DansesNavbar from './DansesNavbar';
 import { DanseProps } from '../types';
 import React from 'react';
 
-export default function Danse({ image, nom, textes, danses }: DanseProps) {
+export default function Danse({
+  image,
+  nom,
+  textes,
+  danses,
+  subtitle,
+}: DanseProps) {
   return (
     <Container>
       <DansesNavbar danses={danses} />
@@ -21,11 +28,15 @@ export default function Danse({ image, nom, textes, danses }: DanseProps) {
       </TitleWrapper>
       <ContentWrapper>
         <TextContainer>
+          <h2>{subtitle}</h2>
           {textes.map((texte, index) => (
             <p key={index}>{texte.paragraphe}</p>
           ))}
         </TextContainer>
-        <Image alt="marion" src={image.url} />
+        <ImageContainer>
+          <Image alt={image.alt} src={image.url} />
+          <title>{image.title}</title>
+        </ImageContainer>
       </ContentWrapper>
     </Container>
   );

@@ -5,20 +5,32 @@ import Layout from '../../components/commons/Layout';
 import Danse from '../../components/Danse';
 import { loadDansesData } from '../../lib/loadDansesData';
 import { DansesProps } from '../../types';
+import Head from 'next/head';
 
 const Name = ({ menu, allPages, allDanses }: DansesProps) => {
   const menuImage = menu.marion;
 
   const router = useRouter();
   const { name } = router.query;
-  const { nom, textes, image } = allDanses.filter(
+  const { nom, textes, image, subtitle } = allDanses.filter(
     (danse) => danse.slug === name
   )[0];
 
   return (
-    <Layout image={menuImage} pages={allPages}>
-      <Danse nom={nom} textes={textes} image={image} danses={allDanses} />
-    </Layout>
+    <>
+      <Head>
+        <title>Danses - {name} | Marion Luna Deleria</title>
+      </Head>
+      <Layout image={menuImage} pages={allPages}>
+        <Danse
+          nom={nom}
+          textes={textes}
+          image={image}
+          danses={allDanses}
+          subtitle={subtitle}
+        />
+      </Layout>
+    </>
   );
 };
 

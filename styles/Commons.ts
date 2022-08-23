@@ -29,7 +29,7 @@ export const Main = styled.main`
   }
 `;
 
-export const Container = styled.article`
+export const Container = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -55,12 +55,12 @@ export const TitleWrapper = styled.div`
   }
 
   @media screen and (${device.s}) {
-    margin: 40px 40px 0 40px;
+    margin: 20px 40px 0 40px;
   }
 
   @media screen and (${device.m}) {
     text-align: left;
-    margin: 40px 80px 0 80px;
+    margin: 20px 80px 0 80px;
     > svg {
       display: flex;
     }
@@ -81,7 +81,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.article`
   display: flex;
   flex-direction: column;
   flex-flow: column-reverse;
@@ -90,19 +90,21 @@ export const ContentWrapper = styled.div`
   margin: 30px 20px 20px 20px;
   row-gap: 20px;
   @media screen and (${device.s}) {
-    margin: 40px 40px 40px 40px;
-    justify-content: start;
+    margin: 30px 40px 40px 40px;
   }
 
   @media screen and (${device.m}) {
     flex-direction: row;
     column-gap: 100px;
-    margin: 40px 80px 0 80px;
+    margin: 20px 80px 20px 80px;
     flex-flow: row-reverse;
   }
 `;
 
 export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   font-size: 1em;
   text-align: justify;
 
@@ -113,21 +115,35 @@ export const TextContainer = styled.div`
     width: 50%;
   }
 `;
-
-export const Image = styled.img`
+export const ImageContainer = styled.div`
+  display: flex;
   width: 100%;
-  max-height: 380px;
-  margin: 0 20px;
-  object-fit: cover;
-  object-position: 0 10%;
-  border-radius: ${borderRadius.image}px;
+  height: 250px;
   @media screen and (${device.s}) {
-    object-position: 0 50%;
+    height: 350px;
   }
 
   @media screen and (${device.m}) {
-    max-height: 380px;
     width: 50%;
+    max-height: 100%;
+  }
+`;
+
+export const Image = styled.img`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0 20px;
+  object-fit: cover;
+  object-position: 0 5%;
+  border-radius: ${borderRadius.image}px;
+
+  @media screen and (${device.s}) {
+  }
+
+  @media screen and (${device.m}) {
+    height: 100%;
+    object-position: center;
   }
 `;
 

@@ -12,6 +12,7 @@ export async function loadGalleryData() {
             id
             alt
             url
+            title
           }
         }
       }

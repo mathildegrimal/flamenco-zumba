@@ -3,13 +3,19 @@ import type { GetStaticProps } from 'next';
 import Layout from '../components/commons/Layout';
 import { loadIndexData } from '../lib/loadIndexData';
 import { HomeProps, PageProps } from '../types';
+import Head from 'next/head';
 
 const MentionsLegales = ({ menu, allPages }: PageProps) => {
   const image = menu.marion;
   return (
-    <Layout image={image} pages={allPages}>
-      <p>mentions</p>
-    </Layout>
+    <>
+      <Head>
+        <title>Mentions légales | Flamenco zumba</title>
+      </Head>
+      <Layout image={image} pages={allPages}>
+        <p>mentions</p>
+      </Layout>
+    </>
   );
 };
 

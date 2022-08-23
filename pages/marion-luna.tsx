@@ -4,33 +4,43 @@ import {
   Container,
   ContentWrapper,
   Image,
+  ImageContainer,
   TextContainer,
   Title,
   TitleWrapper,
 } from '../styles/Commons';
 import { MarionProps } from '../types';
 import { loadMarionData } from '../lib/loadMarionData';
+import Head from 'next/head';
 
 const MarionLuna = ({ allPages, menu, presentation }: MarionProps) => {
   const menuImage = menu.marion;
 
   const { image, paragraphes } = presentation;
   return (
-    <Layout image={menuImage} pages={allPages}>
-      <Container>
-        <TitleWrapper>
-          <Title>Marion Luna</Title>
-        </TitleWrapper>
-        <ContentWrapper>
-          <TextContainer>
-            {paragraphes.map((p, index) => (
-              <p key={index}>{p.paragraphe}</p>
-            ))}
-          </TextContainer>
-          <Image alt="marion" src={image.url} />
-        </ContentWrapper>
-      </Container>
-    </Layout>
+    <>
+      <Head>
+        <title>Marion Luna | Flamenco zumba</title>
+      </Head>
+      <Layout image={menuImage} pages={allPages}>
+        <Container>
+          <TitleWrapper>
+            <Title>Marion Luna</Title>
+          </TitleWrapper>
+          <ContentWrapper>
+            <TextContainer>
+              {paragraphes.map((p, index) => (
+                <p key={index}>{p.paragraphe}</p>
+              ))}
+            </TextContainer>
+            <ImageContainer>
+              <Image alt="marion" src={image.url} />
+            </ImageContainer>
+            <h2>Danseuse, professeur et chorégraphe</h2>
+          </ContentWrapper>
+        </Container>
+      </Layout>
+    </>
   );
 };
 

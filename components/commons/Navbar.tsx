@@ -10,6 +10,7 @@ import {
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { NavbarProps } from '../../types';
+import React from 'react';
 
 export default function Navbar({
   image,
@@ -23,7 +24,10 @@ export default function Navbar({
     <NavbarWrapper>
       <NavbarMain>
         <Link href="/">
-          <NavbarImage src={image.url} />
+          <>
+            <NavbarImage src={image.url} />
+            <title>Marion Luna Deleria</title>
+          </>
         </Link>
         <NavbarText>Menu</NavbarText>
 

@@ -99,10 +99,10 @@ export const Text = styled.p`
   margin: 20px 20px 0 20px;
 
   @media screen and (${device.s}) {
-    margin: 40px 40px 0 40px;
+    margin: 30px 40px 0 40px;
   }
 
   @media screen and (${device.m}) {
-    margin: 40px 80px 0 80px;
+    margin: 20px 80px 0 80px;
   }
 `;

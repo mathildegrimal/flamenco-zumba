@@ -6,6 +6,7 @@ export const navbarQuery = `
   }
   menu {
     marion {
+      id
       alt
       url
       title

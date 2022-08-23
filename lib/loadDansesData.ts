@@ -9,9 +9,12 @@ export async function loadDansesData() {
         ${navbarQuery}
         allDanses(orderBy: ordre_ASC) {
           id
+          subtitle
           image {
             url
             alt
+            title
+            id
           }
           nom
           textes {

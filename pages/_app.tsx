@@ -6,31 +6,38 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Flamenco - Zumba | Marion Luna Deleria</title>
+        <title>Flamenco zumba | Marion Luna Deleria</title>
         <meta
           name="description"
-          content="Flamenco Zumba, Zumba kids, Zumba strong, fitness, Rumba, cours de danses éveil / enfants / adultes près de Montpellier avec Marion Luna Deleria. A "
+          content="Cours de Flamenco, Zumba, Zumba kids, Zumba strong, fitness, Rumba, leçons de danses éveil / enfants / adolescents / adultes près de Montpellier, Prades-le-Lez avec Marion Luna Deleria. "
         />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, height=device-height,"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="google-site-verification"
           content="PSOR-BRIzIfnXmQ6eB9npKJ-eeX3zsObjRQ3NGoMB1w"
         />
-        <link rel="icon" href="/public/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
+        <meta name="author" content="Marion Luna Deleria" />
+        <meta name="robots" content="follow" />
+        <meta
+          name="og:title"
+          property="og:title"
+          content="Flamenco Zumba | Marion Luna Deleria"
         />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap"
-          rel="stylesheet"
+        <meta
+          name="og:description"
+          property="og:description"
+          content="Flamenco Zumba | Marion Luna Deleria"
         />
+        <meta property="og:type" content="siteweb" />
+        <meta
+          property="og:description"
+          content="Cours de Flamenco, Zumba, Zumba kids, Zumba strong, fitness, Rumba, leçons de danses éveil / enfants / adolescents / adultes près de Montpellier, Prades-le-Lez avec Marion Luna Deleria. "
+        />
+        <meta
+          property="og:image"
+          content="https://www.datocms-assets.com/70452/1661286962-marion-danse-flamenco.jpg"
+        />
+        <meta property="og:url" content="https://www.flamenco-zumba.com" />
       </Head>
       <Component {...pageProps} />
     </>

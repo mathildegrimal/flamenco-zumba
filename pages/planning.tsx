@@ -3,14 +3,20 @@ import Layout from '../components/commons/Layout';
 import PlanningTable from '../components/PlanningTable';
 import { loadPlanningData } from '../lib/loadPlanningData';
 import { PlanningProps } from '../types';
+import Head from 'next/head';
 
 const Planning = ({ planning, allPages, menu }: PlanningProps) => {
   const image = menu.marion;
 
   return (
-    <Layout image={image} pages={allPages}>
-      <PlanningTable planning={planning.planning} />
-    </Layout>
+    <>
+      <Head>
+        <title>Planning | Flamenco zumba</title>
+      </Head>
+      <Layout image={image} pages={allPages}>
+        <PlanningTable planning={planning.planning} />
+      </Layout>
+    </>
   );
 };
 

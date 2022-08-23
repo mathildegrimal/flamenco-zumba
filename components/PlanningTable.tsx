@@ -7,6 +7,7 @@ import {
   PlanningImageContainer,
 } from '../styles/Planning';
 import Link from 'next/link';
+import React from 'react';
 
 export default function PlanningTable({ planning }: PlanningTableProps) {
   return (
@@ -32,11 +33,14 @@ export default function PlanningTable({ planning }: PlanningTableProps) {
           href={`${planning.url}?dl=${planning.title}`}
           download={planning.title}
         >
-          Télécharger le planning
+          <h2>Télécharger le planning</h2>
         </Link>
       </DownloadPlanningContainer>
       <PlanningImageContainer>
         <PlanningImage src={planning.url} alt={planning.alt} />
+        <title>
+          Planning des cours de flamenco, zumba, rumba et sévillanes
+        </title>
       </PlanningImageContainer>
     </Container>
   );
