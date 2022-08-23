@@ -8,7 +8,7 @@ const Sitemap = () => {
 };
 
 export const getServerSideProps = async ({ res }: any) => {
-  const BASE_URL = 'www.flamenco-zumba.com';
+  const BASE_URL = 'https://flamenco-zumba.com';
   const pagesDir = 'pages/*.tsx';
   let pagesPaths: Array<string> = glob.sync(pagesDir);
   pagesPaths = pagesPaths
