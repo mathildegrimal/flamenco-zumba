@@ -146,15 +146,17 @@ export default function Navbar({
               </Link>
             );
           } else {
-            return (
-              <Link key={page.id} href={page.slug}>
-                <NavbarItemText
-                  className={router.pathname === page.slug ? 'active' : ''}
-                >
-                  {page.titre}
-                </NavbarItemText>
-              </Link>
-            );
+            if (page.slug !== '/mentions-legales') {
+              return (
+                <Link key={page.id} href={page.slug}>
+                  <NavbarItemText
+                    className={router.pathname === page.slug ? 'active' : ''}
+                  >
+                    {page.titre}
+                  </NavbarItemText>
+                </Link>
+              );
+            }
           }
         })}
       </NavbarItemContainer>

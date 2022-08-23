@@ -80,7 +80,18 @@ export const Title = styled.h1`
     font-size: 5em;
   }
 `;
-
+export const ContentContainer = styled.article`
+  display: flex;
+  flex-direction: column;
+  margin: 30px 20px 20px 20px;
+  justify-content: flex-start;
+  @media screen and (${device.s}) {
+    margin: 30px 40px 40px 40px;
+  }
+  @media screen and (${device.m}) {
+    margin: 20px 80px 20px 80px;
+  }
+`;
 export const ContentWrapper = styled.article`
   display: flex;
   flex-direction: column;
