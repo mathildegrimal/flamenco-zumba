@@ -75,7 +75,7 @@ const MentionsLegales = ({ menu, allPages }: PageProps) => {
             <Subtitle>Données personnelles</Subtitle>
             <p>
               Le site internet www.flamenco-zumba.com ne collecte aucune donnée
-              personnelle de l'utilisateur.
+              personnelle de l&apos;utilisateur.
             </p>
           </ContentContainer>
         </Container>
