@@ -15,13 +15,13 @@ export const getServerSideProps = async ({ res }: any) => {
     .filter((path: any) => !path.includes('/_'))
     .filter((path: any) => !path.includes('404'))
     .map((staticPagePath) => {
-      console.log(staticPagePath.split('pages/')[1]);
       if (staticPagePath.split('.tsx')[0].includes('index')) {
         return `${BASE_URL}`;
+      } else {
+        return `${BASE_URL}/${
+          staticPagePath.split('pages/')[1].split('.tsx')[0]
+        }`;
       }
-      return `${BASE_URL}/${
-        staticPagePath.split('pages/')[1].split('.tsx')[0]
-      }`;
     });
 
   const danses: DansesProps = await loadDansesData();
