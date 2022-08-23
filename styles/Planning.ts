@@ -18,6 +18,25 @@ export const DownloadPlanningContainer = styled.div`
     margin: 40px 80px 0 80px;
   }
 `;
+
+export const ActuContainer = styled.article`
+  display: flex;
+  flex-direction: column;
+  margin: 30px 20px 0 20px;
+
+  > p {
+    margin: 5px 0;
+  }
+
+  @media screen and (${device.s}) {
+    margin: 20px 40px 0 40px;
+  }
+
+  @media screen and (${device.m}) {
+    text-align: left;
+    margin: 20px 80px 0 80px;
+  }
+`;
 export const PlanningImageContainer = styled.div`
   display: flex;
   margin: 20px 0;

@@ -2,6 +2,7 @@ import { Container, Title, TitleWrapper } from '../styles/Commons';
 import FanIcon from './commons/FanIcon';
 import { PlanningTableProps } from '../types';
 import {
+  ActuContainer,
   DownloadPlanningContainer,
   PlanningImage,
   PlanningImageContainer,
@@ -16,6 +17,41 @@ export default function PlanningTable({ planning }: PlanningTableProps) {
         <FanIcon />
         <Title>Planning</Title>
       </TitleWrapper>
+      <ActuContainer>
+        <p>📢 C’est bientôt la rentrée !</p>
+
+        <p>
+          Pour cette saison 2022/2023, Bougez Flamenco revient avec ses cours
+          hebdomadaires <br />
+          de Flamenco, Rumba, Sévillanes et Zumba tous niveaux !
+        </p>
+
+        <p>
+          Les dates sont données, alors on vous laisse prendre vos agendas pour
+          les noter :
+        </p>
+
+        <h2>➡ Foire aux associations :</h2>
+
+        <ul>
+          <li>
+            Vendredi 9 septembre de 17h30 à 19h à St Vincent (dans la cours de
+            l’école).
+          </li>
+          <li>
+            Mardi 13 septembre de 18h à 20h accompagné d’une petite
+            démonstration à Assas (au stade)
+          </li>
+        </ul>
+        <p>Début des cours :</p>
+
+        <p>➡ Cours à Assas : Jeudi 15 et Vendredi 16 septembre 2022</p>
+        <p>➡ Cours à St Vincent de barbeyrargues : Lundi 19 septembre</p>
+        <p>
+          Pour plus de détails sur les jours et horaires, consultez le planning
+          ci-dessous !{' '}
+        </p>
+      </ActuContainer>
       <DownloadPlanningContainer>
         <svg
           width="25"
