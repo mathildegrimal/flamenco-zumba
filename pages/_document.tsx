@@ -13,7 +13,7 @@ export default function Document() {
           type="image/png"
         />
         <link
-          rel="apple-touch-icon-precomposed"
+          rel="apple-touch-icon"
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=16&amp;amp;h=16"
           sizes="16x16"
         />
@@ -23,7 +23,7 @@ export default function Document() {
           sizes="16x16"
         />
         <link
-          rel="apple-touch-icon-precomposed"
+          rel="apple-touch-icon"
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=32&amp;amp;h=32"
           sizes="32x32"
         />
@@ -39,7 +39,7 @@ export default function Document() {
           type="image/png"
         />
         <link
-          rel="apple-touch-icon-precomposed"
+          rel="apple-touch-icon"
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=64&amp;amp;h=64"
           sizes="64x64"
         />
@@ -61,7 +61,7 @@ export default function Document() {
           type="image/png"
         />
         <link
-          rel="apple-touch-icon-precomposed"
+          rel="apple-touch-icon"
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=96&amp;amp;h=96"
           sizes="96x96"
         />
@@ -72,7 +72,7 @@ export default function Document() {
           sizes="96x96"
         />
         <link
-          rel="apple-touch-icon-precomposed"
+          rel="apple-touch-icon"
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=128&amp;amp;h=128"
           sizes="128x128"
         />
