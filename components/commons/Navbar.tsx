@@ -1,6 +1,7 @@
 import {
   NavbarIcon,
   NavbarImage,
+  NavbarImageContainer,
   NavbarItemContainer,
   NavbarItemText,
   NavbarMain,
@@ -24,10 +25,10 @@ export default function Navbar({
     <NavbarWrapper>
       <NavbarMain>
         <Link href="/">
-          <>
+          <NavbarImageContainer>
             <NavbarImage src={image.url} />
-            <title>Marion Luna Deleria</title>
-          </>
+            <title>{image.title}</title>
+          </NavbarImageContainer>
         </Link>
         <NavbarText>Menu</NavbarText>
 

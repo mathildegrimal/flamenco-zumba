@@ -76,7 +76,9 @@ export const NavbarItemContainer = styled.div`
   @media screen and (${device.m}) {
   }
 `;
-
+export const NavbarImageContainer = styled.div`
+  display: flex;
+`;
 export const NavbarImage = styled.img`
   display: flex;
   border-radius: 50%;

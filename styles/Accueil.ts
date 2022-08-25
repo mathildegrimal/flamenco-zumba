@@ -84,6 +84,10 @@ export const Title = styled.h1`
   margin: 0;
   font-size: 25px;
 
+  > strong {
+    font-weight: bold;
+  }
+
   @media screen and (${device.s}) {
     font-size: 30px;
   }
