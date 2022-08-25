@@ -94,6 +94,12 @@ export default function Document() {
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=192&amp;amp;h=192"
           type="image/png"
         />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=180&amp;amp;h=180"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
