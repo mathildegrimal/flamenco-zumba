@@ -18,6 +18,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta name="author" content="Marion Luna Deleria" />
         <meta name="robots" content="follow" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <meta
           name="og:title"
           property="og:title"

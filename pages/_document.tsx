@@ -13,6 +13,10 @@ export default function Document() {
         />
         <link
           rel="apple-touch-icon"
+          href="https://www.datocms-assets.com/70452/1661430593-apple-touch-icon.png"
+        />
+        <link
+          rel="apple-touch-icon"
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=16&amp;amp;h=16"
           sizes="16x16"
         />
