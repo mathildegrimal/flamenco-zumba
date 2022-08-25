@@ -32,10 +32,11 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  overflow: scroll;
   @media screen and (${device.s}) {
+    height: 100vh;
+    overflow: scroll;
   }
   @media screen and (${device.m}) {
   }

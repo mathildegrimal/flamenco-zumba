@@ -49,9 +49,9 @@ export default function PlanningTable({ planning }: PlanningTableProps) {
         </ul>
         <p>Début des cours :</p>
 
-        <p>➡ Cours à Mauguio : Mercredi 14 septembre</p>
+        <p>➡ Cours à St Vincent de Barbeyrargues : Lundi 12 septembre</p>
+        <p>➡ Cours à Mauguio : Mardi 13 et Mercredi 14 septembre</p>
         <p>➡ Cours à Assas : Jeudi 15 et Vendredi 16 septembre 2022</p>
-        <p>➡ Cours à St Vincent de Barbeyrargues : Lundi 19 septembre</p>
 
         <p>
           Pour plus de détails sur les jours et horaires, consultez le planning

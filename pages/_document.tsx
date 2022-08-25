@@ -6,6 +6,94 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          sizes="16x16"
+          href="https://www.datocms-assets.com/205/1525789775-dato.png?w=16&amp;amp;h=16"
+          type="image/png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=16&amp;amp;h=16"
+          sizes="16x16"
+        />
+        <link
+          rel="msapplication-square16x16logo"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=16&amp;amp;h=16"
+          sizes="16x16"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=32&amp;amp;h=32"
+          sizes="32x32"
+        />
+        <link
+          rel="msapplication-square32x32logo"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=32&amp;amp;h=32"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          sizes="32x32"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=32&amp;amp;h=32"
+          type="image/png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=64&amp;amp;h=64"
+          sizes="64x64"
+        />
+        <link
+          rel="msapplication-square64x64logo"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=64&amp;amp;h=64"
+          sizes="64x64"
+        />
+        <link
+          rel="icon"
+          sizes="64x64"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=64&amp;amp;h=64"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          sizes="96x96"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=96&amp;amp;h=96"
+          type="image/png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=96&amp;amp;h=96"
+          sizes="96x96"
+        />
+
+        <link
+          rel="msapplication-square96x96logo"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=96&amp;amp;h=96"
+          sizes="96x96"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=128&amp;amp;h=128"
+          sizes="128x128"
+        />
+        <link
+          rel="icon"
+          sizes="128x128"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=128&amp;amp;h=128"
+          type="image/png"
+        />
+
+        <link
+          rel="msapplication-square128x128logo"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=128&amp;amp;h=128"
+          sizes="128x128"
+        />
+        <link
+          rel="icon"
+          sizes="192x192"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=192&amp;amp;h=192"
+          type="image/png"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
