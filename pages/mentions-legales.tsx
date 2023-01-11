@@ -2,7 +2,7 @@ import type { GetStaticProps } from 'next';
 
 import Layout from '../components/commons/Layout';
 import { loadIndexData } from '../lib/loadIndexData';
-import { HomeProps, PageProps } from '../types';
+import { PageProps } from '../types';
 import Head from 'next/head';
 import {
   Container,
@@ -11,6 +11,7 @@ import {
   Title,
   TitleWrapper,
 } from '../styles/Commons';
+import React from 'react';
 
 const MentionsLegales = ({ menu, allPages }: PageProps) => {
   const image = menu.marion;
@@ -84,10 +85,10 @@ const MentionsLegales = ({ menu, allPages }: PageProps) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const { accueil, menu, allPages } = await loadIndexData();
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+  const { menu, allPages } = await loadIndexData();
   return {
-    props: { menu, allPages, accueil },
+    props: { menu, allPages },
   };
 };
 

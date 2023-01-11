@@ -59,6 +59,11 @@ export const TitleWrapper = styled.div`
   @media screen and (${device.m}) {
     text-align: left;
     margin: 20px 80px 0 80px;
+    &.actualite {
+      align-items: start;
+      text-align: left;
+    }
+
     > svg {
       display: flex;
     }
@@ -69,15 +74,19 @@ export const Title = styled.h1`
   margin: 0;
   font-family: 'Petit Formal Script', cursive;
   color: ${colors.rose};
-  font-size: 3em;
+  font-size: 25px;
+
+  > strong {
+    font-weight: bold;
+  }
 
   @media screen and (${device.s}) {
-    font-size: 4em;
+    font-size: 30px;
   }
   @media screen and (${device.m}) {
-    font-size: 5em;
   }
 `;
+
 export const ContentContainer = styled.article`
   display: flex;
   flex-direction: column;
@@ -95,7 +104,6 @@ export const ContentWrapper = styled.article`
   flex-direction: column;
   flex-flow: column-reverse;
   align-items: center;
-  height: 100%;
   margin: 30px 20px 20px 20px;
   row-gap: 20px;
   @media screen and (${device.s}) {
@@ -128,8 +136,9 @@ export const ImageContainer = styled.div`
   display: flex;
   width: 100%;
   height: 250px;
+
   @media screen and (${device.s}) {
-    height: 350px;
+    height: 450px;
   }
 
   @media screen and (${device.m}) {
@@ -144,7 +153,7 @@ export const Image = styled.img`
   height: 100%;
   margin: 0 20px;
   object-fit: cover;
-  object-position: 0 5%;
+  object-position: 0 30%;
   border-radius: ${borderRadius.image}px;
 
   @media screen and (${device.s}) {
@@ -168,6 +177,7 @@ export const Button = styled.button`
   background: ${colors.rose};
   color: white;
   margin-top: 20px;
+  cursor: pointer;
 
   border-radius: ${borderRadius.bouton}px;
   width: fit-content;
@@ -177,5 +187,20 @@ export const Button = styled.button`
 
   &:hover {
     background: ${colors.rose};
+  }
+`;
+
+export const Text = styled.p`
+  font-size: 18px;
+  text-align: justify;
+  line-height: 25px;
+  margin: 20px 20px 0 20px;
+
+  @media screen and (${device.s}) {
+    margin: 30px 40px 0 40px;
+  }
+
+  @media screen and (${device.m}) {
+    margin: 20px 80px 0 80px;
   }
 `;

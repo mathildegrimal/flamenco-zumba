@@ -4,6 +4,7 @@ import { device } from './breakpoints';
 
 export const GalleryContainer = styled.article`
   display: flex;
+  height: 100%;
   flex-direction: column;
   margin: 30px 20px 20px 20px;
   gap: 20px;
@@ -29,7 +30,7 @@ export const GalleryImageSelectedContainer = styled.div`
 
   @media screen and (${device.m}) {
     width: 50%;
-    height: 60vh;
+    height: 70vh;
   }
 `;
 
@@ -55,17 +56,17 @@ export const GalleryImagesWrapper = styled.article`
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  height: 300px;
+  height: 330px;
   overflow: scroll;
   width: 100%;
   border-radius: ${borderRadius.image};
 
   @media screen and (${device.s}) {
-    height: 20vh;
+    height: 250px;
   }
   @media screen and (${device.m}) {
     width: 50%;
-    height: 60vh;
+    height: 70vh;
     gap: 10px;
   }
 `;
@@ -73,7 +74,7 @@ export const GalleryImagesWrapper = styled.article`
 export const GalleryImage = styled.img`
   display: flex;
   width: calc(20% - 5px);
-  height: 75px;
+  height: calc((330px / 3) - 5px);
   object-fit: cover;
   object-position: 10% 50%;
   border-radius: ${borderRadius.image}px;
@@ -85,10 +86,10 @@ export const GalleryImage = styled.img`
 
   @media screen and (${device.s}) {
     width: calc(12.5% - 5px);
-    height: 130px;
+    height: calc((250px / 2) - 5px);
   }
   @media screen and (${device.m}) {
     width: calc(20% - 10px);
-    height: calc(24% - 10px);
+    height: calc((70vh / 4) - 10px);
   }
 `;

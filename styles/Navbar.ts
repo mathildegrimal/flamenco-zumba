@@ -55,7 +55,8 @@ export const NavbarItemContainer = styled.div`
   align-items: center;
   transition: all linear 0.5s;
   transform: translateY(-100%);
-  padding: 20px 0;
+  padding: 20px 0 0 1px;
+  margin-left: -1px;
 
   &.open {
     transform: translateY(70px);

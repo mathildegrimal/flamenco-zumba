@@ -64,6 +64,7 @@ export const LeftHeaderImage = styled.img`
 
 export const ContentContainer = styled.article`
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -75,38 +76,141 @@ export const ContentContainer = styled.article`
   }
 
   @media screen and (${device.m}) {
+    margin-bottom: 30px;
   }
 `;
 
-export const Title = styled.h1`
-  font-family: 'Petit Formal Script', cursive;
-  color: ${colors.rose};
-  margin: 0;
-  font-size: 25px;
-
-  > strong {
-    font-weight: bold;
+export const ActuContainer = styled.article`
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  background: ${colors.lightRose};
+  border-radius: 10px;
+  margin: 20px 20px 50px 20px;
+  padding-bottom: 20px;
+  @media screen and (${device.s}) {
+    margin: 20px 40px 50px 40px;
   }
+  @media screen and (${device.m}) {
+    margin: 0 50px 50px 50px;
+    padding: 0;
+  }
+`;
+
+export const ActuWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
 
   @media screen and (${device.s}) {
-    font-size: 30px;
   }
 
   @media screen and (${device.m}) {
+    flex-direction: row;
   }
 `;
 
-export const Text = styled.p`
+export const ActuTitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0 0 0;
+  @media screen and (${device.s}) {
+  }
+
+  @media screen and (${device.m}) {
+    text-align: left;
+    margin: 20px 80px 0px 80px;
+  }
+`;
+export const ActuTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  align-items: center;
+
+  @media screen and (${device.s}) {
+    margin: 0;
+  }
+
+  @media screen and (${device.m}) {
+    justify-content: center;
+    width: 60%;
+  }
+`;
+export const ActuText = styled.p`
   font-size: 18px;
   text-align: justify;
   line-height: 25px;
-  margin: 20px 20px 0 20px;
+  margin: 20px;
 
   @media screen and (${device.s}) {
-    margin: 30px 40px 0 40px;
   }
 
   @media screen and (${device.m}) {
-    margin: 20px 80px 0 80px;
+    margin: 20px 80px 0 0;
+    width: 75%;
+  }
+`;
+export const ActuImageContainer = styled.div`
+  display: flex;
+  height: auto;
+  max-width: 400px;
+  margin: 30px 20px 20px 20px;
+
+  &.close {
+    display: none;
+  }
+
+  &.open {
+    display: none;
+  }
+
+  @media screen and (${device.m}) {
+    cursor: pointer;
+    width: 25%;
+    &.open {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      z-index: 1500;
+      opacity: 1;
+      bottom: -300px;
+      left: 25%;
+      width: 40%;
+      max-width: 600px;
+
+      > p {
+        color: white;
+        font-family: 'Petit Formal Script', cursive;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+    }
+`;
+
+export const ActuImage = styled.img`
+  width: 100%;
+  opacity: 1;
+`;
+
+export const AccueilImageModal = styled.div`
+  display: none;
+
+  @media screen and (${device.m}) {
+    z-index: 1000;
+    width: 100vw;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    &.open {
+      position: fixed;
+      display: flex;
+    }
   }
 `;

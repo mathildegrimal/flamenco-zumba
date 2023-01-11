@@ -12,10 +12,10 @@ export type PageType = {
   titre: string;
 };
 
-export interface ContactType {
+export type ContactType = {
   telephone: string;
   email: string;
-}
+};
 
 export type RichTextType = {
   value: {
@@ -32,14 +32,14 @@ export type RichTextType = {
   };
 };
 
-export interface DanseType {
+export type DanseType = {
   id: string;
   subtitle: string;
   image: ImageType;
   nom: string;
   textes: { paragraphe: string }[];
   slug: string;
-}
+};
 
 export interface PageProps {
   menu: {
@@ -61,13 +61,21 @@ export interface MarionProps extends PageProps {
 
 export interface HomeProps extends PageProps {
   accueil: AccueilProps;
+  actualite: ActualiteType;
 }
+
+export type ActualiteType = {
+  image: ImageType;
+  texte: string;
+  titre: string;
+};
 
 export interface AccueilProps {
   header: Array<ImageType>;
   titre: RichTextType;
   texte: RichTextType;
   boutonPlanning: string;
+  actualite: ActualiteType;
 }
 
 export interface GalerieProps extends PageProps {

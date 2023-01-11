@@ -5,8 +5,9 @@ import Accueil from '../components/Accueil';
 import { loadIndexData } from '../lib/loadIndexData';
 import { HomeProps } from '../types';
 import Head from 'next/head';
+import { loadActuData } from '../lib/loadActuData';
 
-const Home = ({ menu, allPages, accueil }: HomeProps) => {
+const Home = ({ menu, allPages, accueil, actualite }: HomeProps) => {
   const image = menu.marion;
   const { header, titre, texte, boutonPlanning } = accueil;
   return (
@@ -20,16 +21,19 @@ const Home = ({ menu, allPages, accueil }: HomeProps) => {
           titre={titre}
           texte={texte}
           boutonPlanning={boutonPlanning}
+          actualite={actualite}
         />
       </Layout>
     </>
   );
 };
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const { accueil, menu, allPages } = await loadIndexData();
+export const getStaticProps: GetStaticProps<any> = async () => {
+  const { menu, allPages, accueil } = await loadIndexData();
+  const { actualite } = await loadActuData();
+
   return {
-    props: { menu, allPages, accueil },
+    props: { menu, allPages, accueil, actualite },
   };
 };
 
