@@ -39,7 +39,11 @@ export default function Accueil({
   const leftImage = header[1];
   const [open, setOpen] = useState(initState);
   useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : 'unset';
+    if (window) {
+      if (window.innerWidth > 1024) {
+        document.body.style.overflow = open ? 'hidden' : 'unset';
+      }
+    }
   }, [open]);
 
   function handleOpen() {
