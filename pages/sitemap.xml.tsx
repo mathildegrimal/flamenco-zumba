@@ -25,7 +25,6 @@ export const getServerSideProps = async ({ res }: any) => {
     });
 
   const danses: DansesProps = await loadDansesData();
-  console.log(danses);
   let dynamicPaths = [];
   for (const danse of danses.allDanses) {
     dynamicPaths.push(`${BASE_URL}/danses/${danse.slug}`);

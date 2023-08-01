@@ -47,16 +47,13 @@ const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
             </GalleryImageSelectedContainer>
             <GalleryImagesWrapper>
               {images.map((image, index) => (
-                <>
-                  <GalleryImage
-                    alt={image.alt}
-                    src={image.url}
-                    key={image.id}
-                    onClick={() => handleSelectedImage(image)}
-                    className={selectedImage.id === image.id ? 'active' : ''}
-                  />
-                  <title key={index}>{image.title}</title>
-                </>
+                <GalleryImage
+                  alt={image.alt}
+                  src={image.url}
+                  key={image.id}
+                  onClick={() => handleSelectedImage(image)}
+                  className={selectedImage.id === image.id ? 'active' : ''}
+                />
               ))}
             </GalleryImagesWrapper>
           </GalleryContainer>

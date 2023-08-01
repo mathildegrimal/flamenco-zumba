@@ -30,13 +30,11 @@ export default function Accueil({
   titre,
   texte,
   boutonPlanning,
-  actualite,
 }: AccueilProps) {
   const initState: boolean = false;
   const texteToDisplay = texte.value.document.children[0].children;
   const titleToDisplay = titre.value.document.children[0].children;
   const rightImage = header[0];
-  const leftImage = header[1];
   const [open, setOpen] = useState(initState);
   useEffect(() => {
     if (window) {
@@ -47,17 +45,12 @@ export default function Accueil({
   }, [open]);
 
   function handleOpen() {
-    console.log(open);
     setOpen(!open);
   }
 
   return (
     <Container id="accueil-container">
       <HeaderContainer>
-        <LeftHeaderImageContainer>
-          <LeftHeaderImage src={leftImage.url} alt={leftImage.alt} />
-          <title>{leftImage.title}</title>
-        </LeftHeaderImageContainer>
         <RightHeaderImageContainer>
           <RightHeaderImage src={rightImage.url} alt={rightImage.alt} />
           <title>{rightImage.title}</title>
@@ -97,7 +90,7 @@ export default function Accueil({
         </Button>
       </ContentContainer>
 
-      <ActuContainer>
+      {/* <ActuContainer>
         <ActuTitleWrapper>
           <Title>{actualite.titre}</Title>
         </ActuTitleWrapper>
@@ -127,7 +120,7 @@ export default function Accueil({
       >
         <p>Fermer</p>
         <ActuImage src={actualite.image.url} />
-      </ActuImageContainer>
+      </ActuImageContainer> */}
     </Container>
   );
 }

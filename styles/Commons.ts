@@ -147,13 +147,28 @@ export const ImageContainer = styled.div`
   }
 `;
 
+export const ImageContainerMarion = styled.div`
+  display: flex;
+  width: 100%;
+  height: 250px;
+
+  @media screen and (${device.s}) {
+    height: 450px;
+  }
+
+  @media screen and (${device.m}) {
+    width: 100%;
+    max-height: 100%;
+  }
+`;
+
 export const Image = styled.img`
   display: flex;
   width: 100%;
   height: 100%;
   margin: 0 20px;
   object-fit: cover;
-  object-position: 0 30%;
+  object-position: 0 10%;
   border-radius: ${borderRadius.image}px;
 
   @media screen and (${device.s}) {

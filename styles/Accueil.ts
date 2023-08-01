@@ -6,7 +6,6 @@ export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 375px;
   margin: 20px 20px 0 20px;
   gap: 15px;
   @media screen and (${device.s}) {
@@ -29,7 +28,7 @@ export const RightHeaderImageContainer = styled.div`
   @media screen and (${device.s}) {
     display: flex;
     height: 100%;
-    width: 40%;
+    width: 100%;
   }
   @media screen and (${device.m}) {
   }

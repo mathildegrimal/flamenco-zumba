@@ -5,6 +5,7 @@ import {
   ContentWrapper,
   Image,
   ImageContainer,
+  ImageContainerMarion,
   TextContainer,
   Title,
   TitleWrapper,
@@ -33,10 +34,12 @@ const MarionLuna = ({ allPages, menu, presentation }: MarionProps) => {
                 <p key={index}>{p.paragraphe}</p>
               ))}
             </TextContainer>
-            <ImageContainer>
-              <Image alt="marion" src={image.url} />
-            </ImageContainer>
-            <h2>Danseuse, professeur et chorégraphe</h2>
+            <div>
+              <h2>Danseuse, professeur et chorégraphe</h2>
+              <ImageContainerMarion>
+                <Image alt="marion" src={image.url} />
+              </ImageContainerMarion>
+            </div>
           </ContentWrapper>
         </Container>
       </Layout>

@@ -61,7 +61,7 @@ export interface MarionProps extends PageProps {
 
 export interface HomeProps extends PageProps {
   accueil: AccueilProps;
-  actualite: ActualiteType;
+  // actualite: ActualiteType;
 }
 
 export type ActualiteType = {
@@ -75,7 +75,7 @@ export interface AccueilProps {
   titre: RichTextType;
   texte: RichTextType;
   boutonPlanning: string;
-  actualite: ActualiteType;
+  // actualite: ActualiteType;
 }
 
 export interface GalerieProps extends PageProps {

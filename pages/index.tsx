@@ -7,7 +7,7 @@ import { HomeProps } from '../types';
 import Head from 'next/head';
 import { loadActuData } from '../lib/loadActuData';
 
-const Home = ({ menu, allPages, accueil, actualite }: HomeProps) => {
+const Home = ({ menu, allPages, accueil }: HomeProps) => {
   const image = menu.marion;
   const { header, titre, texte, boutonPlanning } = accueil;
   return (
@@ -21,7 +21,7 @@ const Home = ({ menu, allPages, accueil, actualite }: HomeProps) => {
           titre={titre}
           texte={texte}
           boutonPlanning={boutonPlanning}
-          actualite={actualite}
+          // actualite={actualite}
         />
       </Layout>
     </>
@@ -30,10 +30,10 @@ const Home = ({ menu, allPages, accueil, actualite }: HomeProps) => {
 
 export const getStaticProps: GetStaticProps<any> = async () => {
   const { menu, allPages, accueil } = await loadIndexData();
-  const { actualite } = await loadActuData();
+  // const { actualite } = await loadActuData();
 
   return {
-    props: { menu, allPages, accueil, actualite },
+    props: { menu, allPages, accueil },
   };
 };
 
