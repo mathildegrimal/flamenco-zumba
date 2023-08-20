@@ -7,14 +7,17 @@ import Head from 'next/head';
 
 const Planning = ({ planning, allPages, menu }: PlanningProps) => {
   const image = menu.marion;
-
   return (
     <>
       <Head>
         <title>Planning | Flamenco zumba</title>
       </Head>
       <Layout image={image} pages={allPages}>
-        <PlanningTable planning={planning.planning} />
+        <PlanningTable
+          planning={planning.planning}
+          planningDetail={planning.planningDetail}
+          tarifs={planning.tarifs}
+        />
       </Layout>
     </>
   );

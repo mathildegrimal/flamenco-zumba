@@ -123,4 +123,6 @@ export interface PlanningProps extends PageProps {
 
 export interface PlanningTableProps {
   planning: ImageType;
+  planningDetail: ImageType[];
+  tarifs: ImageType;
 }

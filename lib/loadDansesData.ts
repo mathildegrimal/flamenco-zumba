@@ -1,8 +1,9 @@
 import { gql } from '@apollo/client';
 import { client } from './client';
 import { navbarQuery } from './navbarQuery';
+import { DansesProps } from '../types';
 
-export async function loadDansesData() {
+export async function loadDansesData(): Promise<DansesProps> {
   const { data } = await client.query({
     query: gql`
       query {

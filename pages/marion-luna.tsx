@@ -4,7 +4,6 @@ import {
   Container,
   ContentWrapper,
   Image,
-  ImageContainer,
   ImageContainerMarion,
   TextContainer,
   Title,

@@ -21,7 +21,6 @@ const Home = ({ menu, allPages, accueil }: HomeProps) => {
           titre={titre}
           texte={texte}
           boutonPlanning={boutonPlanning}
-          // actualite={actualite}
         />
       </Layout>
     </>
@@ -30,7 +29,6 @@ const Home = ({ menu, allPages, accueil }: HomeProps) => {
 
 export const getStaticProps: GetStaticProps<any> = async () => {
   const { menu, allPages, accueil } = await loadIndexData();
-  // const { actualite } = await loadActuData();
 
   return {
     props: { menu, allPages, accueil },
