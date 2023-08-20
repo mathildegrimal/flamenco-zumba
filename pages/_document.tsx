@@ -6,6 +6,11 @@ export default function Document() {
     <Html>
       <Head>
         <link
+          rel="icon"
+          type="image/x-icon"
+          href="https://www.datocms-assets.com/70452/1692569290-favicon.ico"
+        />
+        <link
           rel="shortcut icon"
           sizes="16x16"
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=16&amp;amp;h=16"
@@ -82,7 +87,6 @@ export default function Document() {
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=96&amp;amp;h=96"
           sizes="96x96"
         />
-
         <link
           rel="msapplication-square96x96logo"
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=96&amp;amp;h=96"
@@ -99,7 +103,6 @@ export default function Document() {
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=128&amp;amp;h=128"
           type="image/png"
         />
-
         <link
           rel="msapplication-square128x128logo"
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=128&amp;amp;h=128"
@@ -111,7 +114,6 @@ export default function Document() {
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=192&amp;amp;h=192"
           type="image/png"
         />
-
         <link
           rel="apple-touch-icon"
           sizes="180x180"
