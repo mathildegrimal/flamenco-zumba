@@ -6,14 +6,28 @@ export default function Document() {
     <Html>
       <Head>
         <link
-          rel="icon"
+          rel="shortcut icon"
           sizes="16x16"
-          href="https://www.datocms-assets.com/205/1525789775-dato.png?w=16&amp;amp;h=16"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=16&amp;amp;h=16"
           type="image/png"
         />
         <link
-          rel="apple-touch-icon"
-          href="https://www.datocms-assets.com/70452/1661430593-apple-touch-icon.png"
+          rel="shortcut-icon"
+          sizes="16x16"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=16&amp;amp;h=16"
+          type="image/png"
+        />
+        <link
+          rel="mask-icon"
+          sizes="16x16"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=16&amp;amp;h=16"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          sizes="16x16"
+          href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=16&amp;amp;h=16"
+          type="image/png"
         />
         <link
           rel="apple-touch-icon"
