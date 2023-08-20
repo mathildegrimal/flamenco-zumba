@@ -119,6 +119,15 @@ export default function Document() {
           sizes="180x180"
           href="https://www.datocms-assets.com/70452/1661427594-flamenco.png?w=180&amp;amp;h=180"
         />
+        <link
+          rel="shortcut icon"
+          href="https://www.datocms-assets.com/70452/1692569290-favicon.ico"
+        />
+        <link
+          rel="mask-icon"
+          href="https://www.datocms-assets.com/70452/1692570314-flamenco.svg"
+          color="#F90093"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
