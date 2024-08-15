@@ -19,7 +19,7 @@ export default function PlanningTable({
   planningDetail,
   tarifs,
 }: PlanningTableProps) {
-  const plannings = [planning, ...planningDetail];
+  const plannings = planningDetail;
   const [selectedPlanning, setSelectedPlanning] = useState(0);
   return (
     <Container>
@@ -30,7 +30,7 @@ export default function PlanningTable({
       <ActuContainer>
         <p>📢{'  '}C’est bientôt la rentrée !</p>
         <p>
-          Pour cette saison 2023 / 2024, on revient avec les cours hebdomadaires
+          Pour cette saison 2024 / 2025, on revient avec les cours hebdomadaires
           de Flamenco, Rumba, Sévillanes et Zumba et Step fitness tous niveaux !
         </p>
         <p>
@@ -39,17 +39,16 @@ export default function PlanningTable({
         </p>
         <h3>➡ Foire aux associations :</h3>
         <ul>
-          <li>Mercredi 6 septembre de 15h30 à 18h à la MJC de Mauguio</li>
+          <li>Mercredi 4 septembre de 15h30 à 18h à la MJC de Mauguio</li>
           <li>
-            Vendredi 8 septembre de 17h à 19h à St Vincent (dans la cours de
-            l’école) et de 18h à 20h à Assas (dans la salle des Crouzets)
+            Vendredi 6 septembre de 17h à 19h à St Vincent (dans la cours de
+            l’école)
           </li>
         </ul>
         <h3>➡ Début des cours :</h3>
         <ul>
-          <li>Cours à Mauguio : mardi 12 et mercredi 13 septembre</li>
-          <li>Cours à Assas : jeudi 14 et vendredi 15 septembre</li>
-          <li>Cours à St-Vincent-de-Barbeyrargues : lundi 18 septembre</li>
+          <li>Cours à Mauguio : lundi 16 septembre</li>
+          <li>Cours à St-Vincent-de-Barbeyrargues : jeudi 19 septembre</li>
         </ul>
         <h3>➡ Tarifs (St Vincent et Assas):</h3>
         <p>
