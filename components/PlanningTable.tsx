@@ -50,7 +50,7 @@ export default function PlanningTable({
           <li>Cours à Mauguio : lundi 16 septembre</li>
           <li>Cours à St-Vincent-de-Barbeyrargues : jeudi 19 septembre</li>
         </ul>
-        <h3>➡ Tarifs (St Vincent et Assas):</h3>
+        <h3>➡ Tarifs :</h3>
         <p>
           Pour les tarifs des cours à Mauguio, veuillez contacter la MJC (
           <a href="tel:+33467293499">04 67 29 34 99</a>).
