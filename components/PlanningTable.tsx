@@ -39,11 +39,11 @@ export default function PlanningTable({
         </p>
         <h3>➡ Foire aux associations :</h3>
         <ul>
-          <li>Mercredi 4 septembre de 15h30 à 18h à la MJC de Mauguio</li>
           <li>
-            Vendredi 6 septembre de 17h à 19h à St Vincent (dans la cours de
+            Vendredi 6 septembre de 17h à 19h à St Vincent (dans la cour de
             l’école)
           </li>
+          <li>Mercredi 11 septembre de 15h30 à 18h à la MJC de Mauguio</li>
         </ul>
         <h3>➡ Début des cours :</h3>
         <ul>
