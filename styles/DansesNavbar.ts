@@ -69,7 +69,5 @@ export const Icon = styled.div`
 
   &.open {
     transform: rotate(45deg);
-
   }
-}
 `;

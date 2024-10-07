@@ -32,11 +32,10 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  min-height: 100vh;
   width: 100%;
   @media screen and (${device.s}) {
     height: 100vh;
-    overflow: scroll;
+    overflow: auto;
   }
   @media screen and (${device.m}) {
   }
@@ -57,12 +56,7 @@ export const TitleWrapper = styled.div`
   }
 
   @media screen and (${device.m}) {
-    text-align: left;
-    margin: 20px 80px 0 80px;
-    &.actualite {
-      align-items: start;
-      text-align: left;
-    }
+    margin: 40px 80px 0 80px;
 
     > svg {
       display: flex;
@@ -74,7 +68,7 @@ export const Title = styled.h1`
   margin: 0;
   font-family: 'Petit Formal Script', cursive;
   color: ${colors.rose};
-  font-size: 25px;
+  font-size: 20px;
 
   > strong {
     font-weight: bold;
@@ -157,8 +151,10 @@ export const ImageContainerMarion = styled.div`
   }
 
   @media screen and (${device.m}) {
-    width: 100%;
-    max-height: 100%;
+    width: 40%;
+    img {
+      object-position: top;
+    }
   }
 `;
 
@@ -166,7 +162,6 @@ export const Image = styled.img`
   display: flex;
   width: 100%;
   height: 100%;
-  margin: 0 20px;
   object-fit: cover;
   object-position: 0 10%;
   border-radius: ${borderRadius.image}px;
@@ -188,7 +183,7 @@ export const Subtitle = styled.h2`
 `;
 
 export const Button = styled.button`
-  padding: 15px;
+  padding: 12px;
   background: ${colors.rose};
   color: white;
   margin-top: 20px;
@@ -196,26 +191,16 @@ export const Button = styled.button`
 
   border-radius: ${borderRadius.bouton}px;
   width: fit-content;
-  font-size: 18px;
   border: none;
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
 
-  &:hover {
-    background: ${colors.rose};
-  }
-`;
+  font-size: 16px;
 
-export const Text = styled.p`
-  font-size: 18px;
-  text-align: justify;
-  line-height: 25px;
-  margin: 20px 20px 0 20px;
+  &:hover {
+    background: ${colors.hoverRose};
+    transition: background-color 0.3s ease-out;
+  }
 
   @media screen and (${device.s}) {
-    margin: 30px 40px 0 40px;
-  }
-
-  @media screen and (${device.m}) {
-    margin: 20px 80px 0 80px;
   }
 `;

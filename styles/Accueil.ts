@@ -41,6 +41,74 @@ export const RightHeaderImage = styled.img`
   border-radius: ${borderRadius.image}px;
 `;
 
+export const ContentContainer = styled.article`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-flow: column-reverse;
+  height: fit-content;
+  margin: 20px 20px 20px 20px;
+  gap: 20px;
+
+  @media screen and (${device.s}) {
+    margin: 40px 40px 20px 40px;
+  }
+
+  @media screen and (${device.m}) {
+    flex-direction: row;
+    margin: 40px 80px 20px 80px;
+    gap: 40px;
+  }
+`;
+
+export const AccueilText = styled.p`
+  font-size: 18px;
+  text-align: justify;
+  line-height: 25px;
+  margin: 0;
+
+  @media screen and (${device.s}) {
+  }
+
+  @media screen and (${device.m}) {
+  }
+`;
+
+export const AccueilTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media screen and (${device.s}) {
+  }
+
+  @media screen and (${device.m}) {
+    width: 60%;
+    align-items: space-between;
+  }
+`;
+
+export const VideoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (${device.s}) {
+  }
+
+  @media screen and (${device.m}) {
+    width: 40%;
+  }
+`;
+
+export const AccueilVideo = styled.div`
+  display: flex;
+  height: 300px;
+  width: 100%;
+  iframe {
+    border-radius: 10px;
+    border: 0;
+    width: 100%;
+  }
+`;
+
 export const LeftHeaderImageContainer = styled.div`
   display: flex;
   height: 50%;
@@ -60,31 +128,10 @@ export const LeftHeaderImage = styled.img`
   object-position: 10% 50%;
   border-radius: ${borderRadius.image}px;
 `;
-
-export const ContentContainer = styled.article`
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: fit-content;
-  margin-bottom: 30px;
-
-  @media screen and (${device.s}) {
-    margin: 0;
-  }
-
-  @media screen and (${device.m}) {
-    margin-bottom: 30px;
-  }
-`;
-
 export const ActuContainer = styled.article`
   display: flex;
   flex-direction: column;
   height: fit-content;
-  justify-content: center;
-  align-items: center;
   background: ${colors.lightRose};
   border-radius: 10px;
   margin: 20px 20px 50px 20px;
@@ -191,6 +238,7 @@ export const ActuImageContainer = styled.div`
         cursor: pointer;
       }
     }
+  }
 `;
 
 export const ActuImage = styled.img`

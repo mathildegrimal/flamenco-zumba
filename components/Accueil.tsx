@@ -1,27 +1,15 @@
 import Link from 'next/link';
 import {
-  AccueilImageModal,
-  ActuContainer,
-  ActuImage,
-  ActuImageContainer,
-  ActuText,
-  ActuTextContainer,
-  ActuTitleWrapper,
-  ActuWrapper,
+  AccueilText,
+  AccueilTextContainer,
+  AccueilVideo,
   ContentContainer,
   HeaderContainer,
-  LeftHeaderImage,
-  LeftHeaderImageContainer,
   RightHeaderImage,
   RightHeaderImageContainer,
+  VideoContainer,
 } from '../styles/Accueil';
-import {
-  Button,
-  Container,
-  Text,
-  Title,
-  TitleWrapper,
-} from '../styles/Commons';
+import { Button, Container, Title } from '../styles/Commons';
 import { AccueilProps } from '../types';
 import React, { useEffect, useState } from 'react';
 
@@ -57,7 +45,21 @@ export default function Accueil({
         </RightHeaderImageContainer>
       </HeaderContainer>
       <ContentContainer>
-        <TitleWrapper>
+        <VideoContainer>
+          <AccueilVideo>
+            <iframe
+              src="https://www.youtube.com/embed/X37XsX3WIkc?si=n_seruBp6nGNLrRM"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </AccueilVideo>
+          <Button>
+            <Link href="/videos">Toutes les vidéos</Link>
+          </Button>
+        </VideoContainer>
+        <AccueilTextContainer>
           <Title>
             {titleToDisplay.map((p, index) => {
               if (p.marks?.includes('strong')) {
@@ -71,23 +73,23 @@ export default function Accueil({
               }
             })}
           </Title>
-        </TitleWrapper>
-        <Text>
-          {texteToDisplay.map((p, index) => {
-            if (p.marks?.includes('strong')) {
-              return (
-                <span key={index}>
-                  <strong>{p.value}</strong>
-                </span>
-              );
-            } else {
-              return <span key={index}>{p.value}</span>;
-            }
-          })}
-        </Text>
-        <Button>
-          <Link href="/planning">{boutonPlanning}</Link>
-        </Button>
+          <AccueilText>
+            {texteToDisplay.map((p, index) => {
+              if (p.marks?.includes('strong')) {
+                return (
+                  <span key={index}>
+                    <strong>{p.value}</strong>
+                  </span>
+                );
+              } else {
+                return <span key={index}>{p.value}</span>;
+              }
+            })}
+          </AccueilText>
+          <Button>
+            <Link href="/planning">{boutonPlanning}</Link>
+          </Button>
+        </AccueilTextContainer>
       </ContentContainer>
 
       {/* <ActuContainer>

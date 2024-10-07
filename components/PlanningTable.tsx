@@ -27,7 +27,7 @@ export default function PlanningTable({
         <FanIcon />
         <Title>Planning</Title>
       </TitleWrapper>
-      <ActuContainer>
+      {/* <ActuContainer>
         <p>📢{'  '}C’est bientôt la rentrée !</p>
         <p>
           Pour cette saison 2024 / 2025, on revient avec les cours hebdomadaires
@@ -62,7 +62,7 @@ export default function PlanningTable({
           Pour plus de détails sur les jours et horaires, consultez les
           plannings ci-dessous (cliquez pour agrandir l&apos;image).
         </p>
-      </ActuContainer>
+      </ActuContainer> */}
       <DownloadPlanningWrapper>
         {plannings.map((p, index) => (
           <DownloadPlanningContainer key={index}>

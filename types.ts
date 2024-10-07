@@ -126,3 +126,18 @@ export interface PlanningTableProps {
   planningDetail: ImageType[];
   tarifs: ImageType;
 }
+
+export interface Video {
+  id: string;
+  name: string;
+  link: string;
+}
+
+export interface VideosType {
+  id: string;
+  title: string;
+  items: Array<Video>;
+}
+export interface VideoProps extends PageProps {
+  video: VideosType;
+}
