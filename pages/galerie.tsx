@@ -25,6 +25,7 @@ const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
   const handleSelectedImage = (image: ImageType) => {
     setSelectedImage(image);
   };
+
   return (
     <>
       <Head>
@@ -46,15 +47,18 @@ const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
               <title>{selectedImage.title}</title>
             </GalleryImageSelectedContainer>
             <GalleryImagesWrapper>
-              {images.map((image, index) => (
-                <GalleryImage
-                  alt={image.alt}
-                  src={image.url}
-                  key={image.id}
-                  onClick={() => handleSelectedImage(image)}
-                  className={selectedImage.id === image.id ? 'active' : ''}
-                />
-              ))}
+              {images
+                .map((image) => ({ ...image, date: image._createdAt }))
+                .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+                .map((image) => (
+                  <GalleryImage
+                    alt={image.alt}
+                    src={image.url}
+                    key={image.id}
+                    onClick={() => handleSelectedImage(image)}
+                    className={selectedImage.id === image.id ? 'active' : ''}
+                  />
+                ))}
             </GalleryImagesWrapper>
           </GalleryContainer>
         </Container>

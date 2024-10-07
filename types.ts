@@ -5,6 +5,7 @@ export type ImageType = {
   alt: string;
   url: string;
   title?: string;
+  _createdAt: string;
 };
 export type PageType = {
   id: string;

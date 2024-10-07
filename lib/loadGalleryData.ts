@@ -14,6 +14,7 @@ export async function loadGalleryData(): Promise<GalerieProps> {
             alt
             url
             title
+            _createdAt
           }
         }
       }
