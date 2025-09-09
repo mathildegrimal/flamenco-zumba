@@ -8,8 +8,8 @@ import Head from 'next/head';
 import { loadActuData } from '../lib/loadActuData';
 
 const Home = ({ menu, allPages, accueil }: HomeProps) => {
-  const image = menu.marion;
-  const { header, titre, texte, boutonPlanning } = accueil;
+  const image = menu?.marion;
+  const { header, titre, texte, boutonPlanning } = accueil ?? {};
   return (
     <>
       <Head>
@@ -28,7 +28,7 @@ const Home = ({ menu, allPages, accueil }: HomeProps) => {
 };
 
 export const getStaticProps: GetStaticProps<any> = async () => {
-  const { menu, allPages, accueil } = await loadIndexData();
+  const { menu, allPages, accueil } = (await loadIndexData()) ?? {};
 
   return {
     props: { menu, allPages, accueil },

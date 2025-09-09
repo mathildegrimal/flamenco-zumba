@@ -15,12 +15,14 @@ import SevillaneIcon from '../components/commons/SevillaneIcon';
 import Head from 'next/head';
 
 const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
-  const [selectedImage, setSelectedImage] = React.useState<ImageType>(
-    allGalleries[0].images[0]
+  const initialSelectedImage =
+    allGalleries && allGalleries[0].images ? allGalleries[0].images[0] : null;
+  const [selectedImage, setSelectedImage] = React.useState<ImageType | null>(
+    initialSelectedImage
   );
-  const image = menu.marion;
+  const image = menu?.marion;
 
-  const { images } = allGalleries[0];
+  const { images } = allGalleries ? allGalleries[0] : {};
 
   const handleSelectedImage = (image: ImageType) => {
     setSelectedImage(image);
@@ -41,14 +43,14 @@ const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
           <GalleryContainer>
             <GalleryImageSelectedContainer>
               <GalleryImageSelected
-                src={selectedImage.url}
-                alt={selectedImage.alt}
+                src={selectedImage?.url}
+                alt={selectedImage?.alt}
               />
-              <title>{selectedImage.title}</title>
+              <title>{selectedImage?.title}</title>
             </GalleryImageSelectedContainer>
             <GalleryImagesWrapper>
               {images
-                .map((image) => ({ ...image, date: image._createdAt }))
+                ?.map((image) => ({ ...image, date: image._createdAt }))
                 .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
                 .map((image) => (
                   <GalleryImage
@@ -56,7 +58,7 @@ const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
                     src={image.url}
                     key={image.id}
                     onClick={() => handleSelectedImage(image)}
-                    className={selectedImage.id === image.id ? 'active' : ''}
+                    className={selectedImage?.id === image.id ? 'active' : ''}
                   />
                 ))}
             </GalleryImagesWrapper>
@@ -68,7 +70,7 @@ const Galerie = ({ menu, allPages, allGalleries }: GalerieProps) => {
 };
 
 export const getStaticProps: GetStaticProps<GalerieProps> = async () => {
-  const { menu, allPages, allGalleries } = await loadGalleryData();
+  const { menu, allPages, allGalleries } = (await loadGalleryData()) ?? {};
   return {
     props: { menu, allPages, allGalleries },
   };

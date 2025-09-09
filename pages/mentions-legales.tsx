@@ -14,7 +14,7 @@ import {
 import React from 'react';
 
 const MentionsLegales = ({ menu, allPages }: PageProps) => {
-  const image = menu.marion;
+  const image = menu?.marion;
   return (
     <>
       <Head>
@@ -86,7 +86,7 @@ const MentionsLegales = ({ menu, allPages }: PageProps) => {
 };
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
-  const { menu, allPages } = await loadIndexData();
+  const { menu, allPages } = (await loadIndexData()) ?? {};
   return {
     props: { menu, allPages },
   };

@@ -8,13 +8,13 @@ import { DansesProps } from '../../types';
 import Head from 'next/head';
 
 const Name = ({ menu, allPages, allDanses }: DansesProps) => {
-  const menuImage = menu.marion;
+  const menuImage = menu?.marion;
 
   const router = useRouter();
   const { name } = router.query;
-  const { nom, textes, image, subtitle } = allDanses.filter(
-    (danse) => danse.slug === name
-  )[0];
+  const { nom, textes, image, subtitle } = allDanses
+    ? allDanses?.filter((danse) => danse.slug === name)[0]
+    : {};
 
   return (
     <>
@@ -23,8 +23,8 @@ const Name = ({ menu, allPages, allDanses }: DansesProps) => {
       </Head>
       <Layout image={menuImage} pages={allPages}>
         <Danse
-          nom={nom}
-          textes={textes}
+          nom={nom ?? ''}
+          textes={textes ?? []}
           image={image}
           danses={allDanses}
           subtitle={subtitle}
@@ -42,7 +42,7 @@ export const getStaticPaths: GetStaticPaths<{ name: string }> = async () => {
 };
 
 export const getStaticProps: GetStaticProps<DansesProps> = async () => {
-  const { menu, allPages, allDanses } = await loadDansesData();
+  const { menu, allPages, allDanses } = (await loadDansesData()) ?? {};
   return {
     props: { menu, allPages, allDanses },
   };

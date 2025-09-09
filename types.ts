@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 
 export type ImageType = {
   id: string;
@@ -14,8 +14,8 @@ export type PageType = {
 };
 
 export type ContactType = {
-  telephone: string;
-  email: string;
+  telephone?: string;
+  email?: string;
 };
 
 export type RichTextType = {
@@ -43,14 +43,14 @@ export type DanseType = {
 };
 
 export interface PageProps {
-  menu: {
-    marion: ImageType;
+  menu?: {
+    marion?: ImageType;
   };
-  allPages: Array<PageType>;
+  allPages?: Array<PageType>;
 }
 
 export interface MarionProps extends PageProps {
-  presentation: {
+  presentation?: {
     id: string;
     image: ImageType;
     paragraphes: {
@@ -61,7 +61,7 @@ export interface MarionProps extends PageProps {
 }
 
 export interface HomeProps extends PageProps {
-  accueil: AccueilProps;
+  accueil?: AccueilProps;
   // actualite: ActualiteType;
 }
 
@@ -72,60 +72,60 @@ export type ActualiteType = {
 };
 
 export interface AccueilProps {
-  header: Array<ImageType>;
-  titre: RichTextType;
-  texte: RichTextType;
-  boutonPlanning: string;
+  header?: Array<ImageType>;
+  titre?: RichTextType;
+  texte?: RichTextType;
+  boutonPlanning?: string;
   // actualite: ActualiteType;
 }
 
 export interface GalerieProps extends PageProps {
-  allGalleries: {
-    images: Array<ImageType>;
+  allGalleries?: {
+    images?: Array<ImageType>;
   }[];
 }
 
 export interface ContactProps extends PageProps {
-  allContacts: Array<ContactType>;
+  allContacts?: Array<ContactType>;
 }
 
 export interface DansesProps extends PageProps {
-  allDanses: Array<DanseType>;
+  allDanses?: Array<DanseType>;
 }
 
 export interface DanseProps {
-  image: ImageType;
-  nom: string;
-  textes: { paragraphe: string }[];
-  danses: Array<DanseType>;
-  subtitle: string;
+  image?: ImageType;
+  nom?: string;
+  textes?: { paragraphe: string }[];
+  danses?: Array<DanseType>;
+  subtitle?: string;
 }
 
 export interface DansesNavbarProps {
-  danses: Array<DanseType>;
+  danses?: Array<DanseType>;
 }
 
 export interface LayoutProps {
-  children: JSX.Element;
-  image: ImageType;
-  pages: Array<PageType>;
+  children?: JSX.Element;
+  image?: ImageType;
+  pages?: Array<PageType>;
 }
 
 export interface NavbarProps {
-  image: ImageType;
-  pages: Array<PageType>;
+  image?: ImageType;
+  pages?: Array<PageType>;
   handleOpen: React.MouseEventHandler<HTMLDivElement>;
   open: boolean;
 }
 
 export interface PlanningProps extends PageProps {
-  planning: PlanningTableProps;
+  planning?: PlanningTableProps;
 }
 
 export interface PlanningTableProps {
-  planning: ImageType;
-  planningDetail: ImageType[];
-  tarifs: ImageType;
+  planning?: ImageType;
+  planningDetail?: ImageType[];
+  tarifs?: ImageType;
 }
 
 export interface Video {
@@ -140,5 +140,5 @@ export interface VideosType {
   items: Array<Video>;
 }
 export interface VideoProps extends PageProps {
-  video: VideosType;
+  video?: VideosType;
 }

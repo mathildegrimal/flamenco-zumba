@@ -27,44 +27,17 @@ export default function PlanningTable({
         <FanIcon />
         <Title>Planning</Title>
       </TitleWrapper>
-      {/* <ActuContainer>
-        <p>📢{'  '}C’est bientôt la rentrée !</p>
+      <ActuContainer>
         <p>
-          Pour cette saison 2024 / 2025, on revient avec les cours hebdomadaires
-          de Flamenco, Rumba, Sévillanes et Zumba et Step fitness tous niveaux !
+          Portes ouvertes et renseignements ce mercredi 10 septembre de 15h à
+          18h à la MJC de Mauguio.
         </p>
         <p>
-          Les dates sont données, alors on vous laisse prendre vos agendas pour
-          les noter :
+          Début des cours le lundi 15 septembre, 1er cours d&apos;essai gratuit
         </p>
-        <h3>➡ Foire aux associations :</h3>
-        <ul>
-          <li>
-            Vendredi 6 septembre de 17h à 19h à St Vincent (dans la cour de
-            l’école)
-          </li>
-          <li>Mercredi 11 septembre de 15h30 à 18h à la MJC de Mauguio</li>
-        </ul>
-        <h3>➡ Début des cours :</h3>
-        <ul>
-          <li>Cours à Mauguio : lundi 16 septembre</li>
-          <li>Cours à St-Vincent-de-Barbeyrargues : jeudi 19 septembre</li>
-        </ul>
-        <h3>➡ Inscription / tarifs (Saint-Vincent) :</h3>
-        <p>
-          Pour les tarifs des cours à Mauguio, veuillez contacter la MJC (
-          <a href="tel:+33467293499">04 67 29 34 99</a>).
-        </p>
-        <TarifsImage src={tarifs.url} alt={tarifs.alt} />
-        <title>{tarifs.title}</title>
-        <h3>➡ Planning :</h3>
-        <p>
-          Pour plus de détails sur les jours et horaires, consultez les
-          plannings ci-dessous (cliquez pour agrandir l&apos;image).
-        </p>
-      </ActuContainer> */}
+      </ActuContainer>
       <DownloadPlanningWrapper>
-        {plannings.map((p, index) => (
+        {plannings?.map((p, index) => (
           <DownloadPlanningContainer key={index}>
             <PlanningImage
               src={p.url}
@@ -95,10 +68,10 @@ export default function PlanningTable({
       </DownloadPlanningWrapper>
       <SelectedPlanningImageContainer>
         <SelectedPlanningImage
-          src={plannings[selectedPlanning].url}
-          alt={plannings[selectedPlanning].alt}
+          src={plannings ? plannings[selectedPlanning].url : ''}
+          alt={plannings ? plannings[selectedPlanning].alt : ''}
         />
-        <title>{plannings[selectedPlanning].title}</title>
+        <title>{plannings ? plannings[selectedPlanning].title : ''}</title>
       </SelectedPlanningImageContainer>
     </Container>
   );

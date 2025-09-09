@@ -20,9 +20,9 @@ export default function Accueil({
   boutonPlanning,
 }: AccueilProps) {
   const initState: boolean = false;
-  const texteToDisplay = texte.value.document.children[0].children;
-  const titleToDisplay = titre.value.document.children[0].children;
-  const rightImage = header[0];
+  const texteToDisplay = texte?.value.document.children[0].children;
+  const titleToDisplay = titre?.value.document.children[0].children;
+  const rightImage = header ? header[0] : null;
   const [open, setOpen] = useState(initState);
   useEffect(() => {
     if (window) {
@@ -40,8 +40,8 @@ export default function Accueil({
     <Container id="accueil-container">
       <HeaderContainer>
         <RightHeaderImageContainer>
-          <RightHeaderImage src={rightImage.url} alt={rightImage.alt} />
-          <title>{rightImage.title}</title>
+          <RightHeaderImage src={rightImage?.url} alt={rightImage?.alt} />
+          <title>{rightImage?.title}</title>
         </RightHeaderImageContainer>
       </HeaderContainer>
       <ContentContainer>
@@ -61,7 +61,7 @@ export default function Accueil({
         </VideoContainer>
         <AccueilTextContainer>
           <Title>
-            {titleToDisplay.map((p, index) => {
+            {titleToDisplay?.map((p, index) => {
               if (p.marks?.includes('strong')) {
                 return (
                   <span key={index}>
@@ -74,7 +74,7 @@ export default function Accueil({
             })}
           </Title>
           <AccueilText>
-            {texteToDisplay.map((p, index) => {
+            {texteToDisplay?.map((p, index) => {
               if (p.marks?.includes('strong')) {
                 return (
                   <span key={index}>

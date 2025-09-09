@@ -39,7 +39,7 @@ export default function DansesNavbar({ danses }: DansesNavbarProps) {
         <Subtitle>Plus de danses</Subtitle>
       </DansesNavbarWrapper>
       <NavbarItemContainer display={display ? 'flex' : 'none'}>
-        {danses.map((danse) => (
+        {danses?.map((danse) => (
           <NavbarItem
             key={danse.id}
             className={name === danse.slug ? 'active' : ''}

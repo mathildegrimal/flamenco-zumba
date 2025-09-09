@@ -26,8 +26,8 @@ export default function Navbar({
       <NavbarMain>
         <Link href="/">
           <NavbarImageContainer>
-            <NavbarImage src={image.url} />
-            <title>{image.title}</title>
+            <NavbarImage src={image?.url} />
+            <title>{image?.title}</title>
           </NavbarImageContainer>
         </Link>
         <NavbarText>Menu</NavbarText>
@@ -133,7 +133,7 @@ export default function Navbar({
         </NavbarIcon>
       </NavbarMain>
       <NavbarItemContainer className={open ? 'open' : ''}>
-        {pages.map((page) => {
+        {pages?.map((page) => {
           if (page.titre === 'Danses') {
             return (
               <Link key={page.id} href={`${page.slug}/flamenco`}>

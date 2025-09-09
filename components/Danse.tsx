@@ -29,13 +29,13 @@ export default function Danse({
       <ContentWrapper>
         <TextContainer>
           <h2>{subtitle}</h2>
-          {textes.map((texte, index) => (
+          {textes?.map((texte, index) => (
             <p key={index}>{texte.paragraphe}</p>
           ))}
         </TextContainer>
         <ImageContainer>
-          <Image alt={image.alt} src={image.url} />
-          <title>{image.title}</title>
+          <Image alt={image?.alt} src={image?.url} />
+          <title>{image?.title}</title>
         </ImageContainer>
       </ContentWrapper>
     </Container>

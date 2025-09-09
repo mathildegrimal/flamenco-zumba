@@ -3,8 +3,8 @@ import { client } from './client';
 import { navbarQuery } from './navbarQuery';
 import { DansesProps } from '../types';
 
-export async function loadDansesData(): Promise<DansesProps> {
-  const { data } = await client.query({
+export async function loadDansesData(): Promise<DansesProps | undefined> {
+  const { data } = await client.query<DansesProps>({
     query: gql`
       query {
         ${navbarQuery}

@@ -6,7 +6,7 @@ import { PlanningProps } from '../types';
 import Head from 'next/head';
 
 const Planning = ({ planning, allPages, menu }: PlanningProps) => {
-  const image = menu.marion;
+  const image = menu?.marion;
   return (
     <>
       <Head>
@@ -14,9 +14,9 @@ const Planning = ({ planning, allPages, menu }: PlanningProps) => {
       </Head>
       <Layout image={image} pages={allPages}>
         <PlanningTable
-          planning={planning.planning}
-          planningDetail={planning.planningDetail}
-          tarifs={planning.tarifs}
+          planning={planning?.planning}
+          planningDetail={planning?.planningDetail}
+          tarifs={planning?.tarifs}
         />
       </Layout>
     </>
@@ -24,7 +24,7 @@ const Planning = ({ planning, allPages, menu }: PlanningProps) => {
 };
 
 export const getStaticProps: GetStaticProps<PlanningProps> = async () => {
-  const { planning, allPages, menu } = await loadPlanningData();
+  const { planning, allPages, menu } = (await loadPlanningData()) ?? {};
   return {
     props: { allPages, planning, menu },
   };

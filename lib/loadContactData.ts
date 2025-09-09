@@ -9,8 +9,8 @@ import { navbarQuery } from './navbarQuery';
  */
 import { ContactProps } from '../types';
 
-export async function loadContactData(): Promise<ContactProps> {
-  const { data } = await client.query({
+export async function loadContactData(): Promise<ContactProps | undefined> {
+  const { data } = await client.query<ContactProps>({
     query: gql`
       query {
         ${navbarQuery}

@@ -6,8 +6,8 @@ import { ContactProps } from '../types';
 import Head from 'next/head';
 
 const Contact = ({ menu, allPages, allContacts }: ContactProps) => {
-  const image = menu.marion;
-  const { telephone, email } = allContacts[0];
+  const image = menu?.marion;
+  const { telephone, email } = allContacts ? allContacts[0] : {};
   return (
     <>
       <Head>
@@ -21,9 +21,13 @@ const Contact = ({ menu, allPages, allContacts }: ContactProps) => {
 };
 
 export const getStaticProps: GetStaticProps<ContactProps> = async () => {
-  const { menu, allPages, allContacts } = await loadContactData();
+  const contacts = await loadContactData();
   return {
-    props: { menu, allPages, allContacts },
+    props: {
+      menu: contacts?.menu,
+      allPages: contacts?.allPages,
+      allContacts: contacts?.allContacts,
+    },
   };
 };
 

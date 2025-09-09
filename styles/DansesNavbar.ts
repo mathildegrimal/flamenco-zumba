@@ -28,8 +28,8 @@ export const DansesNavbarWrapper = styled.div`
   }
 `;
 
-export const NavbarItemContainer = styled.nav`
-  display: ${(props: Props) => props.display};
+export const NavbarItemContainer = styled.nav<Props>`
+  display: ${(props) => props.display};
   flex-direction: column;
 
   @media screen and (${device.s}) {

@@ -3,8 +3,8 @@ import { client } from './client';
 import { navbarQuery } from './navbarQuery';
 import { PlanningProps } from '../types';
 
-export async function loadPlanningData(): Promise<PlanningProps> {
-  const { data } = await client.query({
+export async function loadPlanningData(): Promise<PlanningProps | undefined> {
+  const { data } = await client.query<PlanningProps>({
     query: gql`
       query {
         ${navbarQuery}

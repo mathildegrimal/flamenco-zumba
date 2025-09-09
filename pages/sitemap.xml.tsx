@@ -1,6 +1,6 @@
 import React from 'react';
 import { loadDansesData } from '../lib/loadDansesData';
-import glob from 'glob';
+import { glob } from 'glob';
 import { DansesProps } from '../types';
 
 const Sitemap = () => {
@@ -24,9 +24,9 @@ export const getServerSideProps = async ({ res }: any) => {
       }
     });
 
-  const danses: DansesProps = await loadDansesData();
+  const danses = await loadDansesData();
   let dynamicPaths = [];
-  for (const danse of danses.allDanses) {
+  for (const danse of danses?.allDanses ?? []) {
     dynamicPaths.push(`${BASE_URL}/danses/${danse.slug}`);
   }
   const allPaths = [...pagesPaths, ...dynamicPaths];

@@ -1,24 +1,14 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import {
-  Container,
-  TitleWrapper,
-  Title,
-  ContentWrapper,
-  TextContainer,
-  ImageContainerMarion,
-} from '../styles/Commons';
+import { Container, TitleWrapper, Title } from '../styles/Commons';
 import Layout from '../components/commons/Layout';
-import { PlanningProps, VideoProps } from '../types';
+import { VideoProps } from '../types';
 import { GetStaticProps } from 'next';
-import { loadMarionData } from '../lib/loadMarionData';
-import { loadPlanningData } from '../lib/loadPlanningData';
 import FanIcon from '../components/commons/FanIcon';
 import { Video, VideoContainer } from '../styles/Videos';
 import { loadVideosData } from '../lib/loadVideosData';
 
 const Videos = ({ video, allPages, menu }: VideoProps) => {
-  const image = menu.marion;
+  const image = menu?.marion;
 
   return (
     <>
@@ -32,7 +22,7 @@ const Videos = ({ video, allPages, menu }: VideoProps) => {
             <Title>Vidéos</Title>
           </TitleWrapper>
           <VideoContainer>
-            {video.items.map(({ id, link, name }) => (
+            {video?.items.map(({ id, link, name }) => (
               <Video key={id}>
                 <h3>{name}</h3>
                 <iframe
@@ -61,7 +51,7 @@ const Videos = ({ video, allPages, menu }: VideoProps) => {
 };
 
 export const getStaticProps: GetStaticProps<VideoProps> = async () => {
-  const { allPages, menu, video } = await loadVideosData();
+  const { allPages, menu, video } = (await loadVideosData()) ?? {};
   return {
     props: { allPages, video, menu },
   };

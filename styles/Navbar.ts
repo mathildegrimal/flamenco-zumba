@@ -99,7 +99,7 @@ export const NavbarImage = styled.img`
   }
 `;
 
-export const NavbarItemText = styled.a`
+export const NavbarItemText = styled.div`
   color: white;
   cursor: pointer;
   margin: 10px 0;

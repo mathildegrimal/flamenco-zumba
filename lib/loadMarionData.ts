@@ -3,8 +3,8 @@ import { client } from './client';
 import { navbarQuery } from './navbarQuery';
 import { MarionProps } from '../types';
 
-export async function loadMarionData(): Promise<MarionProps> {
-  const { data } = await client.query({
+export async function loadMarionData(): Promise<MarionProps | undefined> {
+  const { data } = await client.query<MarionProps>({
     query: gql`
       query {
         ${navbarQuery}

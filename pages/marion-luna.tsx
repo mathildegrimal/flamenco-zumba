@@ -15,9 +15,9 @@ import Head from 'next/head';
 import FanIcon from '../components/commons/FanIcon';
 
 const MarionLuna = ({ allPages, menu, presentation }: MarionProps) => {
-  const menuImage = menu.marion;
+  const menuImage = menu?.marion;
 
-  const { image, paragraphes } = presentation;
+  const { image, paragraphes } = presentation ?? {};
   return (
     <>
       <Head>
@@ -32,12 +32,12 @@ const MarionLuna = ({ allPages, menu, presentation }: MarionProps) => {
           <ContentWrapper>
             <TextContainer>
               <h2>Danseuse, professeur et chorégraphe</h2>
-              {paragraphes.map((p, index) => (
+              {paragraphes?.map((p: { paragraphe: string }, index: number) => (
                 <p key={index}>{p.paragraphe}</p>
               ))}
             </TextContainer>
             <ImageContainerMarion>
-              <Image alt="marion" src={image.url} />
+              <Image alt="marion" src={image?.url} />
             </ImageContainerMarion>
           </ContentWrapper>
         </Container>
@@ -47,7 +47,7 @@ const MarionLuna = ({ allPages, menu, presentation }: MarionProps) => {
 };
 
 export const getStaticProps: GetStaticProps<MarionProps> = async () => {
-  const { allPages, menu, presentation } = await loadMarionData();
+  const { allPages, menu, presentation } = (await loadMarionData()) ?? {};
   return {
     props: { allPages, menu, presentation },
   };
