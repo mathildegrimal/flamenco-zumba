@@ -17,6 +17,7 @@ const Planning = ({ planning, allPages, menu }: PlanningProps) => {
           planning={planning?.planning}
           planningDetail={planning?.planningDetail}
           tarifs={planning?.tarifs}
+          informations={planning?.informations}
         />
       </Layout>
     </>

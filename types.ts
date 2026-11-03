@@ -126,6 +126,7 @@ export interface PlanningTableProps {
   planning?: ImageType;
   planningDetail?: ImageType[];
   tarifs?: ImageType;
+  informations?: { value?: { document?: { children: DastNode[] } } };
 }
 
 export interface Video {
@@ -141,4 +142,14 @@ export interface VideosType {
 }
 export interface VideoProps extends PageProps {
   video?: VideosType;
+}
+
+export interface DastNode {
+  type: string;
+  value?: string;
+  marks?: string[];
+  url?: string;
+  level?: number;
+  style?: string;
+  children?: DastNode[];
 }

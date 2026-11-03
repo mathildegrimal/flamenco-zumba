@@ -27,6 +27,9 @@ export async function loadPlanningData(): Promise<PlanningProps | undefined> {
             url
             title
           }
+          informations {
+            value
+          }
         }
       }
     `,
